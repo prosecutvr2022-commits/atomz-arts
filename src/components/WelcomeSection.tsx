@@ -28,9 +28,14 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({
               {/* Primary Image: Dance & Music Harmony */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                 <img
-                  src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop"
+                  src="/welcome-arts.png"
                   alt="Traditional Arts and Modern Learning at Atomz Academy"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    if (e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1VvYjxQNyzQU401kAzyE1tIReiTNgXOp9') {
+                      e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1VvYjxQNyzQU401kAzyE1tIReiTNgXOp9';
+                    }
+                  }}
                   className="w-full h-80 sm:h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#851424]/80 via-transparent to-transparent" />

@@ -130,7 +130,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'வருடாந்திர கலை விழா & சான்றிதழ் வழங்கள்',
     category: 'events',
     categoryLabel: 'Academy Events',
-    imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: '/welcome-arts.png',
     caption: 'Dignitaries and senior Vidwans honoring students with diplomas and gold medals.',
     date: 'Atomz Kalai Sangamam',
     featured: true
