@@ -1,0 +1,339 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" width="100%" height="100%">
+  <defs>
+    <!-- Metallic Shield Screws Gradient -->
+    <linearGradient id="screwGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FFFFFF"/>
+      <stop offset="40%" stopColor="#D8DDE3"/>
+      <stop offset="70%" stopColor="#8A95A5"/>
+      <stop offset="100%" stopColor="#5B6575"/>
+    </linearGradient>
+
+    <!-- Top Plate Gradient -->
+    <linearGradient id="plateGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#F8FAFC"/>
+      <stop offset="60%" stopColor="#E2E8F0"/>
+      <stop offset="100%" stopColor="#CBD5E1"/>
+    </linearGradient>
+
+    <!-- Globe Sphere Radial Gradient -->
+    <radialGradient id="globeGrad" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stopColor="#70D6FF"/>
+      <stop offset="35%" stopColor="#0096C7"/>
+      <stop offset="70%" stopColor="#0077B6"/>
+      <stop offset="90%" stopColor="#03045E"/>
+      <stop offset="100%" stopColor="#021430"/>
+    </radialGradient>
+
+    <!-- Globe Specular Highlight -->
+    <linearGradient id="globeHighlight" x1="0%" y1="0%" x2="50%" y2="50%">
+      <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.85"/>
+      <stop offset="40%" stopColor="#BEE9E8" stopOpacity="0.3"/>
+      <stop offset="100%" stopColor="#000000" stopOpacity="0"/>
+    </linearGradient>
+
+    <!-- Letter 3D Navy Gradient -->
+    <linearGradient id="navy3D" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#1E235C"/>
+      <stop offset="45%" stopColor="#131745"/>
+      <stop offset="100%" stopColor="#0A0D2A"/>
+    </linearGradient>
+
+    <!-- Rainbow Swoop Gradients -->
+    <linearGradient id="rainbowYellow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#FFE600"/>
+      <stop offset="100%" stopColor="#FFC700"/>
+    </linearGradient>
+    <linearGradient id="rainbowOrange" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#FF8A00"/>
+      <stop offset="100%" stopColor="#FF5500"/>
+    </linearGradient>
+    <linearGradient id="rainbowPink" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#FF007A"/>
+      <stop offset="100%" stopColor="#D9006C"/>
+    </linearGradient>
+    <linearGradient id="rainbowBlue" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#00E5FF"/>
+      <stop offset="100%" stopColor="#0088FF"/>
+    </linearGradient>
+
+    <!-- Filter for subtle drop shadows -->
+    <filter id="shadowFilter" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Text Path for Arched ATOMZ in Shield -->
+    <path id="archPath" d="M 108 58 Q 200 34 292 58" fill="none"/>
+  </defs>
+
+  <!-- ========================================== -->
+  <!-- 1. TOP SHIELD CREST -->
+  <!-- ========================================== -->
+  <g id="shieldCrest" filter="url(#shadowFilter)">
+    <!-- Shield Outer Cutout Silhouette with Top Notches and Peak -->
+    <path d="M 200 12 
+             L 216 14 
+             L 216 22 
+             L 300 28 
+             L 304 36 
+             L 304 120 
+             C 304 200, 260 250, 200 274 
+             C 140 250, 96 200, 96 120 
+             L 96 36 
+             L 100 28 
+             L 184 22 
+             L 184 14 
+             Z"
+          fill="url(#plateGrad)" 
+          stroke="#101538" 
+          stroke-width="5" 
+          stroke-linejoin="round" />
+
+    <!-- Screw Rivet Left -->
+    <g transform="translate(108, 38)">
+      <circle cx="0" cy="0" r="7" fill="url(#screwGrad)" stroke="#475569" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="5" fill="none" stroke="#FFFFFF" stroke-width="0.8" opacity="0.6"/>
+      <line x1="-4" y1="-2" x2="4" y2="2" stroke="#1E293B" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+
+    <!-- Screw Rivet Right -->
+    <g transform="translate(292, 38)">
+      <circle cx="0" cy="0" r="7" fill="url(#screwGrad)" stroke="#475569" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="5" fill="none" stroke="#FFFFFF" stroke-width="0.8" opacity="0.6"/>
+      <line x1="-3" y1="-3" x2="3" y2="3" stroke="#1E293B" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+
+    <!-- Arched "ATOMZ" in Shield Header -->
+    <text font-family="'Arial Black', 'Impact', sans-serif" font-size="28" font-weight="900" fill="#101538" letter-spacing="4">
+      <textPath href="#archPath" startOffset="50%" text-anchor="middle">
+        ATOMZ
+      </textPath>
+    </text>
+
+    <!-- Inner Shield Frame (Where the 4 quadrants live) -->
+    <path d="M 108 66 
+             L 292 66 
+             L 292 124 
+             C 292 196, 252 240, 200 262 
+             C 148 240, 108 196, 108 124 
+             Z" 
+          fill="#FFFFFF" 
+          stroke="#101538" 
+          stroke-width="7" 
+          stroke-linejoin="miter"/>
+
+    <!-- ==================== QUADRANT 1: Top-Left (Yoga Pose on Navy) ==================== -->
+    <path d="M 110 68 L 196 68 L 196 142 L 110 142 Z" fill="#101538" />
+    
+    <!-- White Yoga Silhouette (Padmasana with overhead Anjali Mudra) -->
+    <g transform="translate(153, 105) scale(0.68)">
+      <!-- Head -->
+      <circle cx="0" cy="-28" r="5.5" fill="#FFFFFF"/>
+      <!-- Hands overhead in prayer -->
+      <path d="M 0 -44 L -4 -35 C -3 -33, 0 -32, 0 -32 C 0 -32, 3 -33, 4 -35 Z" fill="#FFFFFF"/>
+      <!-- Arms arched overhead -->
+      <path d="M -4 -35 C -12 -30, -14 -18, -12 -12 L -7 -10 C -9 -16, -7 -25, 0 -32 C 7 -25, 9 -16, 7 -10 L 12 -12 C 14 -18, 12 -30, 4 -35 Z" fill="#FFFFFF"/>
+      <!-- Torso -->
+      <path d="M -6 -11 L 6 -11 L 8 4 L -8 4 Z" fill="#FFFFFF"/>
+      <!-- Cross-legged Base -->
+      <path d="M -22 18 C -22 10, -12 6, -8 4 L 8 4 C 12 6, 22 10, 22 18 C 22 22, -22 22, -22 18 Z" fill="#FFFFFF"/>
+      <!-- Yoga Pedestal Line -->
+      <path d="M -18 25 C -10 27, 10 27, 18 25 C 20 28, -20 28, -18 25 Z" fill="#FFFFFF"/>
+    </g>
+
+    <!-- ==================== QUADRANT 2: Top-Right (Open Book on White) ==================== -->
+    <g transform="translate(244, 105) scale(0.72)">
+      <!-- Open Book with fanned pages in Navy -->
+      <!-- Left Pages -->
+      <path d="M -3 14 C -14 10, -28 10, -38 15 L -38 -12 C -28 -17, -14 -17, -3 -13 Z" fill="#101538"/>
+      <!-- Right Pages -->
+      <path d="M 3 14 C 14 10, 28 10, 38 15 L 38 -12 C 28 -17, 14 -17, 3 -13 Z" fill="#101538"/>
+      <!-- Page Layers White Strokes -->
+      <path d="M -4 -8 C -14 -12, -26 -12, -34 -8" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+      <path d="M -4 -2 C -14 -6, -26 -6, -34 -2" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+      <path d="M -4 4 C -14 0, -26 0, -34 4" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+      
+      <path d="M 4 -8 C 14 -12, 26 -12, 34 -8" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+      <path d="M 4 -2 C 14 -6, 26 -6, 34 -2" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+      <path d="M 4 4 C 14 0, 26 0, 34 4" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+      <!-- Center Spine -->
+      <path d="M -3 -13 L 0 -11 L 3 -13 L 3 17 L 0 19 L -3 17 Z" fill="#101538"/>
+    </g>
+
+    <!-- ==================== QUADRANT 3: Bottom-Left (Bharatanatyam Dancer on White) ==================== -->
+    <g transform="translate(154, 192) scale(0.68)">
+      <!-- Classical Dancer in Navy -->
+      <!-- Head and Kireedam/Bun -->
+      <circle cx="-1" cy="-34" r="5" fill="#101538"/>
+      <path d="M -3 -41 C 0 -43, 4 -43, 6 -39 C 4 -37, 2 -37, -3 -41 Z" fill="#101538"/>
+      <!-- Long Braid/Jadai -->
+      <path d="M -5 -33 C -10 -28, -10 -15, -7 -5 L -5 -5 C -8 -15, -7 -28, -3 -33 Z" fill="#101538"/>
+      <!-- Raised Arm with Mudra (Hastam) -->
+      <path d="M -2 -27 C -6 -32, -10 -38, -6 -44 C -4 -46, 0 -44, 0 -40 C -1 -35, 2 -30, 2 -27 Z" fill="#101538"/>
+      <!-- Other Arm in Natya pose -->
+      <path d="M 3 -27 C 9 -25, 14 -20, 16 -12 L 12 -11 C 10 -17, 6 -22, 1 -24 Z" fill="#101538"/>
+      <!-- Torso and Blouse -->
+      <path d="M -4 -27 L 4 -27 L 6 -12 L -6 -12 Z" fill="#101538"/>
+      <!-- Fan/Pleats Costume and Aramandi legs -->
+      <path d="M -6 -12 L 6 -12 L 14 4 C 15 12, 12 18, 9 22 L 3 22 C 6 17, 8 11, 4 4 L 0 4 C -4 11, -2 17, 1 22 L -5 22 C -8 18, -11 12, -10 4 Z" fill="#101538"/>
+      <!-- Costume Fan Flare Center -->
+      <path d="M -8 -4 C 0 8, 0 8, 8 -4 L 11 2 C 0 16, 0 16, -11 2 Z" fill="#101538"/>
+      <!-- Feet in Mandi position -->
+      <ellipse cx="6" cy="23" rx="4" ry="2" fill="#101538"/>
+      <ellipse cx="-2" cy="23" rx="4" ry="2" fill="#101538"/>
+    </g>
+
+    <!-- ==================== QUADRANT 4: Bottom-Right (Martial Arts Karate Kick on Navy) ==================== -->
+    <path d="M 204 144 L 290 144 L 290 190 C 270 226, 236 250, 204 259 Z" fill="#101538" />
+    
+    <!-- White Karate Kick Silhouette -->
+    <g transform="translate(242, 190) scale(0.66)">
+      <!-- Head with bandana -->
+      <circle cx="-16" cy="-14" r="5" fill="#FFFFFF"/>
+      <!-- Guard arms / fists -->
+      <path d="M -15 -8 L -9 -6 L -7 2 L -12 1 Z" fill="#FFFFFF"/>
+      <path d="M -17 -7 L -22 -4 L -20 3 L -16 1 Z" fill="#FFFFFF"/>
+      <!-- Torso in Gi (Karate Uniform) -->
+      <path d="M -19 -8 L -10 -6 L -7 8 L -18 6 Z" fill="#FFFFFF"/>
+      <!-- Belt Ribbon Tails (Obi) -->
+      <path d="M -13 6 C -11 11, -8 16, -6 20 L -8 21 C -11 17, -14 11, -15 6 Z" fill="#FFFFFF"/>
+      <!-- Standing Supporting Leg -->
+      <path d="M -16 6 L -14 18 L -12 30 L -18 30 L -20 18 Z" fill="#FFFFFF"/>
+      <path d="M -18 30 L -9 30 L -9 33 L -21 33 Z" fill="#FFFFFF"/>
+      <!-- High Flying Side Kick Extended Leg and Foot -->
+      <path d="M -9 3 L 8 -10 L 26 -22 L 30 -16 L 14 -4 L -8 8 Z" fill="#FFFFFF"/>
+      <!-- Foot heel / blade -->
+      <path d="M 26 -22 L 34 -25 L 36 -19 L 29 -16 Z" fill="#FFFFFF"/>
+    </g>
+
+    <!-- ==================== INNER SHIELD CROSS DIVIDER ==================== -->
+    <!-- Vertical Divider Line -->
+    <line x1="200" y1="66" x2="200" y2="262" stroke="#101538" stroke-width="7"/>
+    <!-- Horizontal Divider Line -->
+    <line x1="108" y1="144" x2="292" y2="144" stroke="#101538" stroke-width="7"/>
+
+    <!-- ==================== DYNAMIC RAINBOW SWOOP ==================== -->
+    <!-- Arcing ribbons bursting across the center from dancer upwards to top-right -->
+    <g>
+      <!-- Yellow Ribbon Top -->
+      <path d="M 134 200 C 145 155, 175 105, 225 108 C 248 110, 270 126, 286 138" 
+            fill="none" stroke="url(#rainbowYellow)" stroke-width="4.5" stroke-linecap="round"/>
+      <!-- Orange Ribbon -->
+      <path d="M 137 203 C 148 158, 177 110, 224 113 C 246 115, 267 129, 283 141" 
+            fill="none" stroke="url(#rainbowOrange)" stroke-width="4.5" stroke-linecap="round"/>
+      <!-- Magenta Ribbon -->
+      <path d="M 140 206 C 151 161, 179 115, 223 118 C 244 120, 264 132, 280 144" 
+            fill="none" stroke="url(#rainbowPink)" stroke-width="4.5" stroke-linecap="round"/>
+      <!-- Cyan Ribbon Bottom -->
+      <path d="M 143 209 C 154 164, 181 120, 222 123 C 242 125, 261 135, 277 147" 
+            fill="none" stroke="url(#rainbowBlue)" stroke-width="4.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 2. MAIN WORDMARK: ATOMZ WITH 3D GLOBE -->
+  <!-- ========================================== -->
+  <g id="mainWordmark" transform="translate(0, 290)">
+    <!-- Letter 'A' -->
+    <path d="M 28 92 L 54 92 L 63 67 L 85 67 L 94 92 L 122 92 L 88 0 L 60 0 Z M 74 34 L 68 51 L 80 51 Z" 
+          fill="url(#navy3D)" filter="url(#shadowFilter)"/>
+    <!-- Letter 'A' Bevel Highlights -->
+    <path d="M 60 0 L 88 0 L 84 12 L 64 12 Z" fill="#4B5EAA" opacity="0.6"/>
+    <path d="M 28 92 L 40 92 L 68 12 L 60 0 Z" fill="#2E3A7E" opacity="0.4"/>
+
+    <!-- Letter 'T' -->
+    <path d="M 112 0 L 186 0 L 186 24 L 163 24 L 163 92 L 135 92 L 135 24 L 112 24 Z" 
+          fill="url(#navy3D)" filter="url(#shadowFilter)"/>
+    <!-- Letter 'T' Bevel Highlights -->
+    <path d="M 112 0 L 186 0 L 182 10 L 116 10 Z" fill="#4B5EAA" opacity="0.6"/>
+    <path d="M 135 24 L 145 24 L 145 92 L 135 92 Z" fill="#2E3A7E" opacity="0.4"/>
+
+    <!-- Letter 'O': 3D Realistic Earth Globe Sphere -->
+    <g id="globeO" transform="translate(200, 46)" filter="url(#shadowFilter)">
+      <!-- Main Glowing Sphere -->
+      <circle cx="0" cy="0" r="46" fill="url(#globeGrad)" />
+      
+      <!-- Globe Continents & Landmasses (Asia, India, Australia, Pacific, Cloud swirls) -->
+      <g clip-path="url(#globeClip)">
+        <!-- India & South Asia Subcontinent -->
+        <path d="M -8 -8 C -4 -16, 2 -24, 10 -22 C 16 -20, 22 -14, 20 -6 C 18 2, 8 14, 0 16 C -4 14, -6 4, -8 -8 Z" 
+              fill="#E0F2FE" opacity="0.85" />
+        <!-- East Asia & China Landmass -->
+        <path d="M 4 -20 C 14 -32, 28 -34, 36 -24 C 40 -16, 36 -4, 26 -2 C 18 -2, 12 -12, 4 -20 Z" 
+              fill="#BAE6FD" opacity="0.8" />
+        <!-- Southeast Asia Islands & Indonesian Archipelago -->
+        <circle cx="16" cy="12" r="3.5" fill="#E0F2FE" opacity="0.9"/>
+        <circle cx="24" cy="16" r="4.5" fill="#E0F2FE" opacity="0.9"/>
+        <circle cx="32" cy="20" r="3" fill="#E0F2FE" opacity="0.9"/>
+        <path d="M 8 18 C 14 16, 20 22, 14 26 C 8 24, 6 20, 8 18 Z" fill="#BAE6FD" opacity="0.85"/>
+        <!-- Australia Continent -->
+        <path d="M 22 24 C 28 20, 38 22, 42 28 C 40 36, 30 40, 24 34 C 20 30, 20 26, 22 24 Z" 
+              fill="#E0F2FE" opacity="0.85"/>
+        <!-- Middle East & Arabian Peninsula -->
+        <path d="M -22 -10 C -16 -16, -10 -16, -8 -10 C -8 -4, -14 0, -20 2 C -24 0, -24 -6, -22 -10 Z" 
+              fill="#BAE6FD" opacity="0.75"/>
+        <!-- Atmospheric Cloud Swirls -->
+        <path d="M -36 10 Q -10 24 20 6 Q 34 -4 44 4" fill="none" stroke="#FFFFFF" stroke-width="2.5" opacity="0.5" stroke-linecap="round"/>
+        <path d="M -30 -18 Q -4 -30 24 -14 Q 38 -4 42 -12" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+      </g>
+      <clipPath id="globeClip">
+        <circle cx="0" cy="0" r="46"/>
+      </clipPath>
+
+      <!-- Glossy 3D Highlight Overlay -->
+      <ellipse cx="-12" cy="-14" rx="28" ry="18" fill="url(#globeHighlight)" transform="rotate(-25 -12 -14)"/>
+      <circle cx="0" cy="0" r="46" fill="none" stroke="#60A5FA" stroke-width="1.5" opacity="0.6"/>
+    </g>
+
+    <!-- Letter 'M' -->
+    <path d="M 239 92 L 239 0 L 266 0 L 284 56 L 302 0 L 329 0 L 329 92 L 305 92 L 305 32 L 291 76 L 277 76 L 263 32 L 263 92 Z" 
+          fill="url(#navy3D)" filter="url(#shadowFilter)"/>
+    <!-- Letter 'M' Bevel Highlights -->
+    <path d="M 239 0 L 266 0 L 262 10 L 243 10 Z" fill="#4B5EAA" opacity="0.6"/>
+    <path d="M 302 0 L 329 0 L 325 10 L 306 10 Z" fill="#4B5EAA" opacity="0.6"/>
+    <path d="M 239 0 L 249 0 L 249 92 L 239 92 Z" fill="#2E3A7E" opacity="0.4"/>
+
+    <!-- Letter 'Z' -->
+    <path d="M 338 0 L 392 0 L 392 22 L 362 68 L 392 68 L 392 92 L 336 92 L 336 70 L 366 24 L 338 24 Z" 
+          fill="url(#navy3D)" filter="url(#shadowFilter)"/>
+    <!-- Letter 'Z' Bevel Highlights -->
+    <path d="M 338 0 L 392 0 L 388 10 L 342 10 Z" fill="#4B5EAA" opacity="0.6"/>
+    <path d="M 336 70 L 366 24 L 372 27 L 344 72 Z" fill="#4B5EAA" opacity="0.3"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 3. RED BAR: "Arts Academy" -->
+  <!-- ========================================== -->
+  <g id="redBarSection" transform="translate(0, 396)">
+    <!-- Red Background Bar with Subtle Rounded Corners -->
+    <rect x="14" y="0" width="372" height="42" rx="5" ry="5" fill="#E51E25" filter="url(#shadowFilter)"/>
+    
+    <!-- White Bold Futuristic/Athletic Text "Arts Academy" -->
+    <text x="200" y="30" 
+          font-family="'Arial Black', 'Montserrat', 'Trebuchet MS', sans-serif" 
+          font-size="30" 
+          font-weight="900" 
+          fill="#FFFFFF" 
+          stroke="#101538"
+          stroke-width="1.2"
+          text-anchor="middle" 
+          letter-spacing="2.8">
+      Arts Academy
+    </text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 4. SLOGAN: "Heart of Arts....." -->
+  <!-- ========================================== -->
+  <g id="sloganSection" transform="translate(0, 470)">
+    <text x="200" y="0" 
+          font-family="'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', 'Great Vibes', cursive, serif" 
+          font-size="34" 
+          font-style="italic" 
+          font-weight="bold" 
+          fill="#101538" 
+          text-anchor="middle" 
+          letter-spacing="4">
+      Heart of Arts . . . . .
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="shieldScrewGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FFFFFF"/>
+      <stop offset="40%" stopColor="#D8DDE3"/>
+      <stop offset="70%" stopColor="#8A95A5"/>
+      <stop offset="100%" stopColor="#5B6575"/>
+    </linearGradient>
+
+    <linearGradient id="shieldPlateGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#F8FAFC"/>
+      <stop offset="60%" stopColor="#E2E8F0"/>
+      <stop offset="100%" stopColor="#CBD5E1"/>
+    </linearGradient>
+
+    <linearGradient id="sYellow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#FFE600"/>
+      <stop offset="100%" stopColor="#FFC700"/>
+    </linearGradient>
+    <linearGradient id="sOrange" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#FF8A00"/>
+      <stop offset="100%" stopColor="#FF5500"/>
+    </linearGradient>
+    <linearGradient id="sPink" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#FF007A"/>
+      <stop offset="100%" stopColor="#D9006C"/>
+    </linearGradient>
+    <linearGradient id="sBlue" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#00E5FF"/>
+      <stop offset="100%" stopColor="#0088FF"/>
+    </linearGradient>
+
+    <path id="shieldArchPath" d="M 28 54 Q 120 30 212 54" fill="none"/>
+  </defs>
+
+  <!-- Outer Shield Plate with top notch center peak -->
+  <path d="M 120 8 
+           L 136 10 
+           L 136 18 
+           L 220 24 
+           L 224 32 
+           L 224 116 
+           C 224 196, 180 246, 120 270 
+           C 60 246, 16 196, 16 116 
+           L 16 32 
+           L 20 24 
+           L 104 18 
+           L 104 10 
+           Z"
+        fill="url(#shieldPlateGrad)" 
+        stroke="#101538" 
+        stroke-width="5" 
+        stroke-linejoin="round" />
+
+  <!-- Screw Left -->
+  <g transform="translate(28, 34)">
+    <circle cx="0" cy="0" r="6" fill="url(#shieldScrewGrad)" stroke="#475569" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="4" fill="none" stroke="#FFFFFF" stroke-width="0.7" opacity="0.6"/>
+    <line x1="-3" y1="-2" x2="3" y2="2" stroke="#1E293B" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Screw Right -->
+  <g transform="translate(212, 34)">
+    <circle cx="0" cy="0" r="6" fill="url(#shieldScrewGrad)" stroke="#475569" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="4" fill="none" stroke="#FFFFFF" stroke-width="0.7" opacity="0.6"/>
+    <line x1="-2" y1="-2" x2="2" y2="2" stroke="#1E293B" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Arched ATOMZ in Shield Header -->
+  <text font-family="'Arial Black', 'Impact', sans-serif" font-size="26" font-weight="900" fill="#101538" letter-spacing="3.5">
+    <textPath href="#shieldArchPath" startOffset="50%" text-anchor="middle">
+      ATOMZ
+    </textPath>
+  </text>
+
+  <!-- Inner Shield White Container -->
+  <path d="M 28 62 
+           L 212 62 
+           L 212 120 
+           C 212 192, 172 236, 120 258 
+           C 68 236, 28 192, 28 120 
+           Z" 
+        fill="#FFFFFF" 
+        stroke="#101538" 
+        stroke-width="6.5" 
+        stroke-linejoin="miter"/>
+
+  <!-- Q1: Top-Left (Yoga Silhouette on Navy) -->
+  <path d="M 30 64 L 116 64 L 116 138 L 30 138 Z" fill="#101538" />
+  <g transform="translate(73, 101) scale(0.65)">
+    <circle cx="0" cy="-28" r="5.5" fill="#FFFFFF"/>
+    <path d="M 0 -44 L -4 -35 C -3 -33, 0 -32, 0 -32 C 0 -32, 3 -33, 4 -35 Z" fill="#FFFFFF"/>
+    <path d="M -4 -35 C -12 -30, -14 -18, -12 -12 L -7 -10 C -9 -16, -7 -25, 0 -32 C 7 -25, 9 -16, 7 -10 L 12 -12 C 14 -18, 12 -30, 4 -35 Z" fill="#FFFFFF"/>
+    <path d="M -6 -11 L 6 -11 L 8 4 L -8 4 Z" fill="#FFFFFF"/>
+    <path d="M -22 18 C -22 10, -12 6, -8 4 L 8 4 C 12 6, 22 10, 22 18 C 22 22, -22 22, -22 18 Z" fill="#FFFFFF"/>
+    <path d="M -18 25 C -10 27, 10 27, 18 25 C 20 28, -20 28, -18 25 Z" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Q2: Top-Right (Open Book on White) -->
+  <g transform="translate(164, 101) scale(0.7)">
+    <path d="M -3 14 C -14 10, -28 10, -38 15 L -38 -12 C -28 -17, -14 -17, -3 -13 Z" fill="#101538"/>
+    <path d="M 3 14 C 14 10, 28 10, 38 15 L 38 -12 C 28 -17, 14 -17, 3 -13 Z" fill="#101538"/>
+    <path d="M -4 -8 C -14 -12, -26 -12, -34 -8" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    <path d="M -4 -2 C -14 -6, -26 -6, -34 -2" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    <path d="M -4 4 C -14 0, -26 0, -34 4" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    <path d="M 4 -8 C 14 -12, 26 -12, 34 -8" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    <path d="M 4 -2 C 14 -6, 26 -6, 34 -2" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    <path d="M 4 4 C 14 0, 26 0, 34 4" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    <path d="M -3 -13 L 0 -11 L 3 -13 L 3 17 L 0 19 L -3 17 Z" fill="#101538"/>
+  </g>
+
+  <!-- Q3: Bottom-Left (Bharatanatyam Dancer on White) -->
+  <g transform="translate(74, 188) scale(0.65)">
+    <circle cx="-1" cy="-34" r="5" fill="#101538"/>
+    <path d="M -3 -41 C 0 -43, 4 -43, 6 -39 C 4 -37, 2 -37, -3 -41 Z" fill="#101538"/>
+    <path d="M -5 -33 C -10 -28, -10 -15, -7 -5 L -5 -5 C -8 -15, -7 -28, -3 -33 Z" fill="#101538"/>
+    <path d="M -2 -27 C -6 -32, -10 -38, -6 -44 C -4 -46, 0 -44, 0 -40 C -1 -35, 2 -30, 2 -27 Z" fill="#101538"/>
+    <path d="M 3 -27 C 9 -25, 14 -20, 16 -12 L 12 -11 C 10 -17, 6 -22, 1 -24 Z" fill="#101538"/>
+    <path d="M -4 -27 L 4 -27 L 6 -12 L -6 -12 Z" fill="#101538"/>
+    <path d="M -6 -12 L 6 -12 L 14 4 C 15 12, 12 18, 9 22 L 3 22 C 6 17, 8 11, 4 4 L 0 4 C -4 11, -2 17, 1 22 L -5 22 C -8 18, -11 12, -10 4 Z" fill="#101538"/>
+    <path d="M -8 -4 C 0 8, 0 8, 8 -4 L 11 2 C 0 16, 0 16, -11 2 Z" fill="#101538"/>
+    <ellipse cx="6" cy="23" rx="4" ry="2" fill="#101538"/>
+    <ellipse cx="-2" cy="23" rx="4" ry="2" fill="#101538"/>
+  </g>
+
+  <!-- Q4: Bottom-Right (Karate Kick on Navy) -->
+  <path d="M 124 140 L 210 140 L 210 186 C 190 222, 156 246, 124 255 Z" fill="#101538" />
+  <g transform="translate(162, 186) scale(0.63)">
+    <circle cx="-16" cy="-14" r="5" fill="#FFFFFF"/>
+    <path d="M -15 -8 L -9 -6 L -7 2 L -12 1 Z" fill="#FFFFFF"/>
+    <path d="M -17 -7 L -22 -4 L -20 3 L -16 1 Z" fill="#FFFFFF"/>
+    <path d="M -19 -8 L -10 -6 L -7 8 L -18 6 Z" fill="#FFFFFF"/>
+    <path d="M -13 6 C -11 11, -8 16, -6 20 L -8 21 C -11 17, -14 11, -15 6 Z" fill="#FFFFFF"/>
+    <path d="M -16 6 L -14 18 L -12 30 L -18 30 L -20 18 Z" fill="#FFFFFF"/>
+    <path d="M -18 30 L -9 30 L -9 33 L -21 33 Z" fill="#FFFFFF"/>
+    <path d="M -9 3 L 8 -10 L 26 -22 L 30 -16 L 14 -4 L -8 8 Z" fill="#FFFFFF"/>
+    <path d="M 26 -22 L 34 -25 L 36 -19 L 29 -16 Z" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Dividers -->
+  <line x1="120" y1="62" x2="120" y2="258" stroke="#101538" stroke-width="6.5"/>
+  <line x1="28" y1="140" x2="212" y2="140" stroke="#101538" stroke-width="6.5"/>
+
+  <!-- Rainbow Swoop -->
+  <g>
+    <path d="M 54 196 C 65 151, 95 101, 145 104 C 168 106, 190 122, 206 134" 
+          fill="none" stroke="url(#sYellow)" stroke-width="4.2" stroke-linecap="round"/>
+    <path d="M 57 199 C 68 154, 97 106, 144 109 C 166 111, 187 125, 203 137" 
+          fill="none" stroke="url(#sOrange)" stroke-width="4.2" stroke-linecap="round"/>
+    <path d="M 60 202 C 71 157, 99 111, 143 114 C 164 116, 184 128, 200 140" 
+          fill="none" stroke="url(#sPink)" stroke-width="4.2" stroke-linecap="round"/>
+    <path d="M 63 205 C 74 160, 101 116, 142 119 C 162 121, 181 131, 197 143" 
+          fill="none" stroke="url(#sBlue)" stroke-width="4.2" stroke-linecap="round"/>
+  </g>
+</svg>

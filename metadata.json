@@ -1,0 +1,8 @@
+{
+  "name": "Atomz Arts Academy",
+  "description": "Premium arts, music, dance, academic and skill development academy in Thiruvarur, Tamil Nadu. Nurturing traditional culture and modern learning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
