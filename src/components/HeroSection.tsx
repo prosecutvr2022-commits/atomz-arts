@@ -145,16 +145,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           {/* Right Column: Hero Visual Frame with Bharatanatyam Art & Cultural Motif (5 cols) */}
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 flex justify-center lg:justify-end items-center relative">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative mx-auto max-w-md lg:max-w-none"
+              className="relative w-full max-w-[330px] sm:max-w-[360px] lg:max-w-[375px]"
             >
-              {/* Outer Golden Temple Arch Glow Frame */}
-              <div className="relative rounded-3xl p-3 bg-gradient-to-b from-[#D4AF37]/60 via-[#851424]/40 to-[#163866]/60 shadow-2xl border border-[#D4AF37]/50">
-                <div className="relative rounded-2xl overflow-hidden bg-[#180F1E] aspect-[9/16] max-h-[560px] flex items-center justify-center">
+              {/* Outer Golden Temple Arch Glow Frame - snugly wrapping the 9:16 aspect poster */}
+              <div className="relative rounded-3xl p-2.5 sm:p-3 bg-gradient-to-b from-[#D4AF37]/60 via-[#851424]/40 to-[#163866]/60 shadow-2xl border border-[#D4AF37]/50">
+                <div className="relative rounded-2xl overflow-hidden bg-[#180F1E] aspect-[9/16] w-full shadow-inner">
                   {/* Native High-Resolution Bharatanatyam Classical Dance Training Visual */}
                   <BharatanatyamPoster className="w-full h-full transform hover:scale-102 transition-transform duration-700" />
                 </div>
@@ -164,7 +164,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -top-3 right-1 sm:-top-4 sm:-right-4 p-2.5 sm:p-3 rounded-2xl bg-[#851424] border-2 border-[#D4AF37] shadow-xl text-center z-20"
+                className="absolute -top-3 -right-2 sm:-top-4 sm:-right-3 p-2.5 sm:p-3 rounded-2xl bg-[#851424] border-2 border-[#D4AF37] shadow-xl text-center z-20"
               >
                 <Award className="w-5 h-5 sm:w-6 sm:h-6 text-amber-300 mx-auto" />
                 <div className="text-[11px] sm:text-xs font-extrabold text-white mt-1">100% Practical</div>

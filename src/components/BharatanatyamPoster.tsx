@@ -18,20 +18,14 @@ export const BharatanatyamPoster: React.FC<BharatanatyamPosterProps> = ({
           src="/bharatanatyam.png"
           alt={alt}
           referrerPolicy="no-referrer"
-          onError={() => {
-            // If local path fails, try direct Google Drive CDN before SVG fallback
-            const img = new Image();
-            img.src = 'https://lh3.googleusercontent.com/d/1180ilh5XvAc3DVAk7EwUb8DDRd0kDxge';
-            img.onload = () => {
-              const el = document.getElementById('bharatanatyam-poster-img') as HTMLImageElement;
-              if (el) el.src = img.src;
-            };
-            img.onerror = () => {
+          onError={(e) => {
+            if (e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1180ilh5XvAc3DVAk7EwUb8DDRd0kDxge') {
+              e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1180ilh5XvAc3DVAk7EwUb8DDRd0kDxge';
+            } else {
               setImageError(true);
-            };
+            }
           }}
-          id="bharatanatyam-poster-img"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-top block"
         />
       ) : (
         <svg
