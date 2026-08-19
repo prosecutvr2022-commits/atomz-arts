@@ -16,7 +16,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'பரதநாட்டிய அரங்கேற்ற நிகழ்வு',
     category: 'dance',
     categoryLabel: 'Classical Dance',
-    imageUrl: 'https://images.unsplash.com/photo-1596464716127-f2a82982239b?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: '/bharatanatyam.png',
     caption: 'Senior disciples presenting traditional Varnam with intense Abhinaya and footwork in classical silk costume.',
     date: 'Annual Cultural Festival',
     featured: true

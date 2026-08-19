@@ -10,7 +10,7 @@ export const ALL_COURSES: Course[] = [
     shortDescription: 'Classical Indian dance covering sacred Adavus, Mudras, expressive Abhinaya, and Arangetram preparation.',
     fullDescription: 'Experience the spiritual and aesthetic depth of Bharatanatyam, the ancient classical dance of Tamil Nadu. Our curriculum systematically trains students in Nritta (pure dance), Nritya (solo expressive dance with facial expressions and mudras), and Natya (dramatic storytelling), preparing disciples for stage performances and formal Arangetram.',
     iconName: 'Sparkles',
-    imageUrl: 'https://images.unsplash.com/photo-1596464716127-f2a82982239b?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/bharatanatyam.png',
     targetAudience: 'Kids (Age 5+), Teens & Adults (Beginners to Advanced)',
     duration: 'Basic (1 Year) | Diploma (3 Years) | Arangetram Intensive',
     schedule: 'Flexible Evening & Weekend Batches',

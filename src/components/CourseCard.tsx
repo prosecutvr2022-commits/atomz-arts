@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Sparkles, Users, Clock, ChevronRight, ArrowUpRight, GraduationCap } from 'lucide-react';
+import { BharatanatyamPoster } from './BharatanatyamPoster';
 import { Course } from '../types';
 
 interface CourseCardProps {
@@ -24,12 +25,16 @@ export const CourseCard: React.FC<CourseCardProps> = ({
     >
       {/* Visual Image Header */}
       <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100">
-        <img
-          src={course.imageUrl}
-          alt={course.name}
-          referrerPolicy="no-referrer"
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
+        {course.id === 'bharatanatyam' ? (
+          <BharatanatyamPoster className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        ) : (
+          <img
+            src={course.imageUrl}
+            alt={course.name}
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+          />
+        )}
 
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

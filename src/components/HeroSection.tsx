@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Sparkles, MapPin, GraduationCap, Phone, ArrowRight, Play, Award, CheckCircle2 } from 'lucide-react';
+import { BharatanatyamPoster } from './BharatanatyamPoster';
 import { CONTACT_INFO, ACADEMY_STATS } from '../data/coursesData';
 import { PageView } from '../types';
 
@@ -153,45 +154,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             >
               {/* Outer Golden Temple Arch Glow Frame */}
               <div className="relative rounded-3xl p-3 bg-gradient-to-b from-[#D4AF37]/60 via-[#851424]/40 to-[#163866]/60 shadow-2xl border border-[#D4AF37]/50">
-                <div className="relative rounded-2xl overflow-hidden bg-[#180F1E] aspect-[4/5] sm:aspect-[3/4]">
-                  {/* Classical Bharatanatyam Dancer Visual */}
-                  <img
-                    src="https://images.unsplash.com/photo-1596464716127-f2a82982239b?q=80&w=1000&auto=format&fit=crop"
-                    alt="Bharatanatyam Classical Dance at Atomz Arts Academy"
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
-                  />
-
-                  {/* Gradient Light Vignette */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#130B17] via-transparent to-black/30" />
-
-                  {/* Traditional Cultural Crest Overprint */}
-                  <div className="absolute top-4 left-4">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-[#D4AF37]/50 text-amber-200 text-xs font-semibold">
-                      <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-                      Classical Heritage
-                    </span>
-                  </div>
-
-                  {/* Floating Highlight Card 1: 21+ Courses */}
-                  <motion.div
-                    initial={{ x: -20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.6, duration: 0.5 }}
-                    className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-[#160E1A]/90 backdrop-blur-md border border-[#D4AF37]/40 shadow-xl space-y-1.5"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="font-cinzel text-xs font-bold text-amber-300 uppercase tracking-wide">
-                        Kaveri Delta Arts Heritage
-                      </span>
-                      <span className="text-[10px] px-2 py-0.5 rounded bg-[#851424] text-white font-bold">
-                        21+ Courses
-                      </span>
-                    </div>
-                    <p className="text-[11px] text-slate-300 font-light leading-snug">
-                      Bharatanatyam • Carnatic Vocal • Veena • Mridangam • Violin • Keyboard • Drawing • Aari Works • Tuitions
-                    </p>
-                  </motion.div>
+                <div className="relative rounded-2xl overflow-hidden bg-[#180F1E] aspect-[9/16] max-h-[560px] flex items-center justify-center">
+                  {/* Native High-Resolution Bharatanatyam Classical Dance Training Visual */}
+                  <BharatanatyamPoster className="w-full h-full transform hover:scale-102 transition-transform duration-700" />
                 </div>
               </div>
 

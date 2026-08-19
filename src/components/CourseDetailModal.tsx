@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Check, Calendar, Clock, Users, Sparkles, BookOpen, GraduationCap, Phone, MessageCircle } from 'lucide-react';
+import { BharatanatyamPoster } from './BharatanatyamPoster';
 import { Course } from '../types';
 import { CONTACT_INFO } from '../data/coursesData';
 
@@ -31,13 +32,17 @@ export const CourseDetailModal: React.FC<CourseDetailModalProps> = ({
         >
           {/* Hero Header with Course Image */}
           <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
-            <img
-              src={course.imageUrl}
-              alt={course.name}
-              referrerPolicy="no-referrer"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#140E17] via-[#140E17]/60 to-transparent" />
+            {course.id === 'bharatanatyam' ? (
+              <BharatanatyamPoster className="w-full h-full object-cover" />
+            ) : (
+              <img
+                src={course.imageUrl}
+                alt={course.name}
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover"
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#140E17] via-[#140E17]/60 to-transparent pointer-events-none" />
 
             {/* Close Button */}
             <button
