@@ -50,6 +50,8 @@ export const CourseDetailModal: React.FC<CourseDetailModalProps> = ({
                     e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1zaNX2hy4vpMBzOE7DooWgMBnbCk5utK2';
                   } else if (course.id === 'ari-embroidery' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1J0Wx875e9p901781VaPk-0T0jinKESb8') {
                     e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1J0Wx875e9p901781VaPk-0T0jinKESb8';
+                  } else if (course.id === 'abacus' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1MQJLODTu2oYfmUziTlOj2XbWrd5AeyPk') {
+                    e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1MQJLODTu2oYfmUziTlOj2XbWrd5AeyPk';
                   }
                 }}
                 className="w-full h-full object-cover object-center"

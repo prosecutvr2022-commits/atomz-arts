@@ -255,7 +255,7 @@ export const ALL_COURSES: Course[] = [
     shortDescription: 'Boost right-brain development, photographic memory, and lightning-fast mental math calculations.',
     fullDescription: 'Abacus training develops rapid mental math computation, concentration, listening skills, and photographic memory, removing math fear in children from an early age.',
     iconName: 'Cpu',
-    imageUrl: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/abacus-mental-math.png',
     targetAudience: 'Children aged 5 to 13 years',
     duration: '8 Progressive Levels (3 Months per Level)',
     schedule: 'Weekly 2 Sessions with Daily Practice Books',

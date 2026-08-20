@@ -89,7 +89,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'அபாகஸ் வேகக் கணித போட்டி',
     category: 'events',
     categoryLabel: 'Academic Events',
-    imageUrl: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: '/abacus-mental-math.png',
     caption: 'Young prodigies demonstrating lightning-speed mental arithmetic without paper or calculators.',
     date: 'State Talent Contest'
   },
