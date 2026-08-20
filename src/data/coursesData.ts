@@ -126,7 +126,7 @@ export const ALL_COURSES: Course[] = [
     shortDescription: 'Learn the divine string instrument of Goddess Saraswati with traditional meend, gamakas, and classical krithis.',
     fullDescription: 'The Saraswati Veena is renowned for its divine resonance and intricate microtones. Our masters guide students in finger plectrum techniques, fret navigation, pulling strings for Gamakas, and sacred concert compositions.',
     iconName: 'Volume2',
-    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/saraswati-veena.png',
     targetAudience: 'Age 8+ to Adults',
     duration: 'Diploma & Classical Concert Tracks',
     schedule: 'Weekday / Weekend Dedicated Batches',

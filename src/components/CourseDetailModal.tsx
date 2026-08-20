@@ -42,6 +42,8 @@ export const CourseDetailModal: React.FC<CourseDetailModalProps> = ({
                 onError={(e) => {
                   if (course.id === 'keyboard' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1lZppaaUDPD7wmUwCnLE-1emjFPCsllKh') {
                     e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1lZppaaUDPD7wmUwCnLE-1emjFPCsllKh';
+                  } else if (course.id === 'veena' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1pBBjHoQaeRGl1JAKNFsuGMmEjwcMntc1') {
+                    e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1pBBjHoQaeRGl1JAKNFsuGMmEjwcMntc1';
                   }
                 }}
                 className="w-full h-full object-cover object-center"
