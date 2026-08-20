@@ -39,6 +39,10 @@ export const CourseCard: React.FC<CourseCardProps> = ({
                 e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1pBBjHoQaeRGl1JAKNFsuGMmEjwcMntc1';
               } else if (course.id === 'nadaswaram-flute' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1uISaMXa2f_2ICs20AolbzP_r6c25Cp2f') {
                 e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1uISaMXa2f_2ICs20AolbzP_r6c25Cp2f';
+              } else if (course.id === 'drawing-painting' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1zaNX2hy4vpMBzOE7DooWgMBnbCk5utK2') {
+                e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1zaNX2hy4vpMBzOE7DooWgMBnbCk5utK2';
+              } else if (course.id === 'ari-embroidery' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1J0Wx875e9p901781VaPk-0T0jinKESb8') {
+                e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1J0Wx875e9p901781VaPk-0T0jinKESb8';
               }
             }}
             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"

@@ -58,7 +58,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'ஆரி எம்பிராய்டரி கைவினை பயிற்சி',
     category: 'classes',
     categoryLabel: 'Vocational Craft',
-    imageUrl: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: '/aari-embroidery.png',
     caption: 'Women artisans working on bridal zari motifs, stone embellishments, and Maggam frame designing.',
     date: 'Self-Employment Batch'
   },
@@ -68,7 +68,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'ஓவியக் கண்காட்சி & வண்ணங்கள்',
     category: 'classes',
     categoryLabel: 'Art & Drawing',
-    imageUrl: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: '/drawing-painting.png',
     caption: 'Student artwork gallery showcasing traditional temple art, water color paintings, and oil pastel landscapes.',
     date: 'Children Fine Art Expo',
     featured: true
