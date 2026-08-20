@@ -38,7 +38,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'வயலின் & வீணை இசை வகுப்பு',
     category: 'music',
     categoryLabel: 'Music & Instruments',
-    imageUrl: 'https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: '/violin.png',
     caption: 'Students receiving personalized guidance on microtone gamakas and bow velocity.',
     date: 'Weekly Studio Session'
   },
@@ -99,7 +99,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'மேற்கத்திய நடன மேடை நிகழ்ச்சி',
     category: 'performances',
     categoryLabel: 'Performances',
-    imageUrl: 'https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: '/western-dance.png',
     caption: 'High-octane choreography presentation by the Atomz Western Dance troupe at district youth fest.',
     date: 'Youth Cultural Fest',
     featured: true
@@ -120,7 +120,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'தையல் கலை & ஆடை வடிவமைப்பு',
     category: 'classes',
     categoryLabel: 'Vocational Craft',
-    imageUrl: 'https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: '/tailoring-fashion.png',
     caption: 'Graduating students displaying custom-tailored designer blouses and ethnic wear creations.',
     date: 'Vocational Graduation'
   },

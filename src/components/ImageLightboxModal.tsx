@@ -57,6 +57,11 @@ export const ImageLightboxModal: React.FC<ImageLightboxModalProps> = ({ item, on
               src={item.imageUrl}
               alt={item.title}
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                if (item.imageUrl === '/drawing-painting.png' || item.id === 'gal-6') {
+                  e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1A-9CcMzqX9oeg7ciwiv4oRdk1fJA3RB6';
+                }
+              }}
               className="max-h-full max-w-full object-contain"
             />
           </div>

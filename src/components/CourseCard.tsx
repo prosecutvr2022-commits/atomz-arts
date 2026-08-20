@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Sparkles, Users, Clock, ChevronRight, ArrowUpRight, GraduationCap } from 'lucide-react';
-import { BharatanatyamPoster } from './BharatanatyamPoster';
 import { Course } from '../types';
 
 interface CourseCardProps {
@@ -25,22 +24,21 @@ export const CourseCard: React.FC<CourseCardProps> = ({
     >
       {/* Visual Image Header */}
       <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100">
-        {course.id === 'bharatanatyam' ? (
-          <BharatanatyamPoster className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-        ) : (
-          <img
-            src={course.imageUrl}
-            alt={course.name}
-            referrerPolicy="no-referrer"
-            onError={(e) => {
-              if (course.id === 'keyboard' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1lZppaaUDPD7wmUwCnLE-1emjFPCsllKh') {
+        <img
+          src={course.imageUrl}
+          alt={course.name}
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            if (course.id === 'bharatanatyam' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1lbzrLe0QiycGlPyoI_21pi9qJdNQGy-B') {
+              e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1lbzrLe0QiycGlPyoI_21pi9qJdNQGy-B';
+            } else if (course.id === 'keyboard' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1lZppaaUDPD7wmUwCnLE-1emjFPCsllKh') {
                 e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1lZppaaUDPD7wmUwCnLE-1emjFPCsllKh';
               } else if (course.id === 'veena' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1pBBjHoQaeRGl1JAKNFsuGMmEjwcMntc1') {
                 e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1pBBjHoQaeRGl1JAKNFsuGMmEjwcMntc1';
               } else if (course.id === 'nadaswaram-flute' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1uISaMXa2f_2ICs20AolbzP_r6c25Cp2f') {
                 e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1uISaMXa2f_2ICs20AolbzP_r6c25Cp2f';
-              } else if (course.id === 'drawing-painting' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1zaNX2hy4vpMBzOE7DooWgMBnbCk5utK2') {
-                e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1zaNX2hy4vpMBzOE7DooWgMBnbCk5utK2';
+              } else if (course.id === 'drawing-painting' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1A-9CcMzqX9oeg7ciwiv4oRdk1fJA3RB6') {
+                e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1A-9CcMzqX9oeg7ciwiv4oRdk1fJA3RB6';
               } else if (course.id === 'ari-embroidery' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1J0Wx875e9p901781VaPk-0T0jinKESb8') {
                 e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1J0Wx875e9p901781VaPk-0T0jinKESb8';
               } else if (course.id === 'abacus' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1MQJLODTu2oYfmUziTlOj2XbWrd5AeyPk') {
@@ -53,11 +51,20 @@ export const CourseCard: React.FC<CourseCardProps> = ({
                 e.currentTarget.src = 'https://lh3.googleusercontent.com/d/19M0fpsFU79JDLxi8x9GEzSxKLYz_aRuX';
               } else if (course.id === 'carrom-board' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1qe3AtJJxbtu09JdS7-fnkRcu_np9Moss') {
                 e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1qe3AtJJxbtu09JdS7-fnkRcu_np9Moss';
+              } else if (course.id === 'tailoring' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1O4fmX_aDlNRna6nGzYAizkmz29GmaADW') {
+                e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1O4fmX_aDlNRna6nGzYAizkmz29GmaADW';
+              } else if (course.id === 'tuition-class-1-12' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1u05uZUPoWrX-A_JDa60X3TuHveIRvwJM') {
+                e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1u05uZUPoWrX-A_JDa60X3TuHveIRvwJM';
+              } else if (course.id === 'beautician-training' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1WDZH93ln5Nv1NZ407ZE8lj8ttaxVx7NT') {
+                e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1WDZH93ln5Nv1NZ407ZE8lj8ttaxVx7NT';
+              } else if (course.id === 'violin' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1AN-Owo856dJtZMD6KKcrmuP6bxZN00K8') {
+                e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1AN-Owo856dJtZMD6KKcrmuP6bxZN00K8';
+              } else if (course.id === 'western-dance' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/14OBIkLtv7FKknQXpcpOgsCT_ewfhiOZ6') {
+                e.currentTarget.src = 'https://lh3.googleusercontent.com/d/14OBIkLtv7FKknQXpcpOgsCT_ewfhiOZ6';
               }
             }}
             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
           />
-        )}
 
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

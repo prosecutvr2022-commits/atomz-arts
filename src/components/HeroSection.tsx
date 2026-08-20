@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Sparkles, MapPin, GraduationCap, Phone, ArrowRight, Play, Award, CheckCircle2 } from 'lucide-react';
-import { BharatanatyamPoster } from './BharatanatyamPoster';
 import { CONTACT_INFO, ACADEMY_STATS } from '../data/coursesData';
 import { PageView } from '../types';
 
@@ -156,7 +155,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="relative rounded-3xl p-2.5 sm:p-3 bg-gradient-to-b from-[#D4AF37]/60 via-[#851424]/40 to-[#163866]/60 shadow-2xl border border-[#D4AF37]/50">
                 <div className="relative rounded-2xl overflow-hidden bg-[#180F1E] aspect-[9/16] w-full shadow-inner">
                   {/* Native High-Resolution Bharatanatyam Classical Dance Training Visual */}
-                  <BharatanatyamPoster className="w-full h-full transform hover:scale-102 transition-transform duration-700" />
+                  <img
+                    src="/bharatanatyam.png"
+                    alt="Bharatanatyam Classical Dance Training"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1lbzrLe0QiycGlPyoI_21pi9qJdNQGy-B';
+                    }}
+                    className="w-full h-full object-cover object-center transform hover:scale-102 transition-transform duration-700"
+                  />
                 </div>
               </div>
 
