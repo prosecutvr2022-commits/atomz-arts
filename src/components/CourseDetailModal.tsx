@@ -39,7 +39,12 @@ export const CourseDetailModal: React.FC<CourseDetailModalProps> = ({
                 src={course.imageUrl}
                 alt={course.name}
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover"
+                onError={(e) => {
+                  if (course.id === 'keyboard' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1lZppaaUDPD7wmUwCnLE-1emjFPCsllKh') {
+                    e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1lZppaaUDPD7wmUwCnLE-1emjFPCsllKh';
+                  }
+                }}
+                className="w-full h-full object-cover object-center"
               />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-[#140E17] via-[#140E17]/60 to-transparent pointer-events-none" />

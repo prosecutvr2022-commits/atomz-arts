@@ -37,7 +37,7 @@ export const ContactCtaBanner: React.FC<ContactCtaBannerProps> = ({ onOpenEnquir
           Join our supportive community of passionate learners in Thiruvarur. All age groups from children to working adults are warmly welcome.
         </p>
 
-        {/* 4 Helplines Display */}
+        {/* 3 Helplines Display */}
         <div className="pt-2">
           <p className="text-xs text-amber-400 font-bold uppercase tracking-wider mb-2">
             Call Any of Our Direct Academy Helplines:
@@ -46,7 +46,7 @@ export const ContactCtaBanner: React.FC<ContactCtaBannerProps> = ({ onOpenEnquir
             {CONTACT_INFO.phoneNumbers.map(phone => (
               <a
                 key={phone}
-                href={`tel:${phone}`}
+                href={`tel:${phone.replace(/\s+/g, '')}`}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-[#851424] border border-amber-500/30 text-white font-mono text-sm font-bold transition-all"
               >
                 <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />

@@ -73,7 +73,7 @@ export const ContactPage: React.FC = () => {
                 {CONTACT_INFO.phoneNumbers.map((phone, idx) => (
                   <a
                     key={phone}
-                    href={`tel:${phone}`}
+                    href={`tel:${phone.replace(/\s+/g, '')}`}
                     className="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 hover:bg-amber-50 border border-slate-200 hover:border-[#D4AF37] transition-all group"
                   >
                     <div className="flex items-center gap-3">
@@ -85,7 +85,7 @@ export const ContactPage: React.FC = () => {
                           {phone}
                         </div>
                         <div className="text-[10px] text-slate-500">
-                          {idx === 0 ? 'Primary Admissions Line' : `Helpline 0${idx + 1}`}
+                          {idx === 0 ? '1st Contact (Primary)' : idx === 1 ? '2nd Contact Number' : '3rd Contact Number'}
                         </div>
                       </div>
                     </div>
@@ -144,8 +144,10 @@ export const ContactPage: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <Mail className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
                   <div>
-                    <strong className="block text-white">Email:</strong>
-                    <span className="text-slate-200">{CONTACT_INFO.email}</span>
+                    <strong className="block text-white">Email ID:</strong>
+                    <a href={`mailto:${CONTACT_INFO.email}`} className="text-slate-200 hover:text-amber-300 transition-colors">
+                      {CONTACT_INFO.email}
+                    </a>
                   </div>
                 </div>
               </div>

@@ -133,8 +133,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 {CONTACT_INFO.phoneNumbers.map((phone, i) => (
                   <a
                     key={phone}
-                    href={`tel:${phone}`}
-                    className="hover:text-amber-300 transition-colors"
+                    href={`tel:${phone.replace(/\s+/g, '')}`}
+                    className="hover:text-amber-300 transition-colors whitespace-nowrap"
                   >
                     {phone}
                     {i < CONTACT_INFO.phoneNumbers.length - 1 && <span className="text-slate-500 ml-2">•</span>}

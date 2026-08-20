@@ -32,7 +32,12 @@ export const CourseCard: React.FC<CourseCardProps> = ({
             src={course.imageUrl}
             alt={course.name}
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            onError={(e) => {
+              if (course.id === 'keyboard' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1lZppaaUDPD7wmUwCnLE-1emjFPCsllKh') {
+                e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1lZppaaUDPD7wmUwCnLE-1emjFPCsllKh';
+              }
+            }}
+            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
           />
         )}
 

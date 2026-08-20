@@ -62,7 +62,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <div className="flex items-center gap-3 text-[11px] sm:text-xs flex-shrink-0">
             <a
-              href={`tel:${CONTACT_INFO.primaryPhone}`}
+              href={`tel:${CONTACT_INFO.primaryPhone.replace(/\s+/g, '')}`}
               className="flex items-center gap-1.5 hover:text-white transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
@@ -182,15 +182,20 @@ export const Navbar: React.FC<NavbarProps> = ({
                     </div>
                     <span className="text-[10px] text-amber-400/80 font-normal">Thiruvarur</span>
                   </div>
-                  <div className="grid grid-cols-2 gap-2 text-xs">
+                  <div className="flex flex-col gap-2 text-xs">
                     {CONTACT_INFO.phoneNumbers.map((phone, idx) => (
                       <a
                         key={phone}
-                        href={`tel:${phone}`}
-                        className="flex items-center justify-center gap-1.5 p-2 rounded-lg bg-white/10 text-white font-mono hover:bg-[#851424] transition-colors"
+                        href={`tel:${phone.replace(/\s+/g, '')}`}
+                        className="flex items-center justify-between px-3 py-2 rounded-lg bg-white/10 text-white font-mono hover:bg-[#851424] transition-colors"
                       >
-                        <Phone className="w-3 h-3 text-[#D4AF37]" />
-                        <span className="text-[11px] font-bold">{phone}</span>
+                        <div className="flex items-center gap-2">
+                          <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
+                          <span className="text-xs font-bold">{phone}</span>
+                        </div>
+                        <span className="text-[10px] text-amber-300">
+                          {idx === 0 ? 'Primary' : `Line 0${idx + 1}`}
+                        </span>
                       </a>
                     ))}
                   </div>

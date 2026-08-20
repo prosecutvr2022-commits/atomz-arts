@@ -108,14 +108,21 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCourse, onOp
                 <Phone className="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-white">Call for Admissions:</p>
-                  <div className="grid grid-cols-2 gap-x-2 gap-y-1 font-mono text-amber-300 font-bold mt-1">
+                  <div className="flex flex-col space-y-1 font-mono text-amber-300 font-bold mt-1 text-xs">
                     {CONTACT_INFO.phoneNumbers.map(phone => (
-                      <a key={phone} href={`tel:${phone}`} className="hover:underline">
+                      <a key={phone} href={`tel:${phone.replace(/\s+/g, '')}`} className="hover:underline hover:text-amber-200">
                         {phone}
                       </a>
                     ))}
                   </div>
                 </div>
+              </div>
+
+              <div className="flex items-center gap-2.5">
+                <Mail className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
+                <a href={`mailto:${CONTACT_INFO.email}`} className="text-slate-300 hover:text-amber-300 transition-colors">
+                  {CONTACT_INFO.email}
+                </a>
               </div>
 
               <div className="flex items-center gap-2.5">

@@ -47,7 +47,7 @@ export const QuickContactFab: React.FC = () => {
               {CONTACT_INFO.phoneNumbers.map((phone, idx) => (
                 <a
                   key={phone}
-                  href={`tel:${phone}`}
+                  href={`tel:${phone.replace(/\s+/g, '')}`}
                   className="flex items-center justify-between p-2.5 rounded-xl bg-white/5 hover:bg-[#851424] border border-amber-500/20 text-white font-mono text-sm font-bold transition-all group"
                 >
                   <div className="flex items-center gap-2">
@@ -55,7 +55,7 @@ export const QuickContactFab: React.FC = () => {
                     <span>{phone}</span>
                   </div>
                   <span className="text-[10px] text-amber-300 group-hover:text-white uppercase font-sans font-semibold">
-                    {idx === 0 ? 'Primary' : `Line ${idx + 1}`}
+                    {idx === 0 ? '1st Contact' : idx === 1 ? '2nd Contact' : '3rd Contact'}
                   </span>
                 </a>
               ))}

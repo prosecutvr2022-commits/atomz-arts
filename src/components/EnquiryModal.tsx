@@ -319,7 +319,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
 
                 {/* Instant Helpline Info */}
                 <div className="flex flex-wrap items-center justify-between p-3 bg-amber-50/70 border border-amber-200/60 rounded-xl text-xs text-amber-900">
-                  <span>Direct Hotline: <strong className="text-[#851424]">9843626558 / 8098615471</strong></span>
+                  <span>Direct Hotline: <strong className="text-[#851424]">{CONTACT_INFO.phoneNumbers.slice(0, 2).join(' / ')}</strong></span>
                   <span className="text-slate-500">Puthu Theru, Thiruvarur</span>
                 </div>
 
