@@ -271,7 +271,7 @@ export const ALL_COURSES: Course[] = [
     shortDescription: 'Professional carrom techniques: precise striker control, angle calculations, cut shots, and board strategy.',
     fullDescription: 'Learn competitive carrom under structured coaching: grip, stance, thumb/finger strikes, doubles coordination, board positioning, and tournament rules.',
     iconName: 'Target',
-    imageUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/carrom-coaching.png',
     targetAudience: 'Kids (Age 6+) to Adults',
     duration: 'Basic to State/District Tournament Level',
     schedule: 'Weekend Sessions & Practice Hours',

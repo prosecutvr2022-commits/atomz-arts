@@ -58,6 +58,8 @@ export const CourseDetailModal: React.FC<CourseDetailModalProps> = ({
                     e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1v7erFGEyIIcOYpqnCehjPUfgBXUgGS-m';
                   } else if (course.id === 'handwriting' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/19M0fpsFU79JDLxi8x9GEzSxKLYz_aRuX') {
                     e.currentTarget.src = 'https://lh3.googleusercontent.com/d/19M0fpsFU79JDLxi8x9GEzSxKLYz_aRuX';
+                  } else if (course.id === 'carrom-board' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1qe3AtJJxbtu09JdS7-fnkRcu_np9Moss') {
+                    e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1qe3AtJJxbtu09JdS7-fnkRcu_np9Moss';
                   }
                 }}
                 className="w-full h-full object-cover object-center"
