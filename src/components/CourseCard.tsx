@@ -45,6 +45,12 @@ export const CourseCard: React.FC<CourseCardProps> = ({
                 e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1J0Wx875e9p901781VaPk-0T0jinKESb8';
               } else if (course.id === 'abacus' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1MQJLODTu2oYfmUziTlOj2XbWrd5AeyPk') {
                 e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1MQJLODTu2oYfmUziTlOj2XbWrd5AeyPk';
+              } else if (course.id === 'spoken-hindi' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1skU4h9p8ctKghH2QrjFwr_jlHA315UcJ') {
+                e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1skU4h9p8ctKghH2QrjFwr_jlHA315UcJ';
+              } else if (course.id === 'spoken-english' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1v7erFGEyIIcOYpqnCehjPUfgBXUgGS-m') {
+                e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1v7erFGEyIIcOYpqnCehjPUfgBXUgGS-m';
+              } else if (course.id === 'handwriting' && e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/19M0fpsFU79JDLxi8x9GEzSxKLYz_aRuX') {
+                e.currentTarget.src = 'https://lh3.googleusercontent.com/d/19M0fpsFU79JDLxi8x9GEzSxKLYz_aRuX';
               }
             }}
             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
