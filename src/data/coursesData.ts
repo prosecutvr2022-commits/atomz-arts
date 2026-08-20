@@ -142,7 +142,7 @@ export const ALL_COURSES: Course[] = [
     shortDescription: 'Sacred wind instruments of Tamil culture: traditional Nadaswaram and sweet bamboo Carnatic Flute.',
     fullDescription: 'Explore the majestic Mangala Isai of Nadaswaram and the soothing spiritual melodies of the bamboo flute (Pullanguzhal). Training includes breath control, embouchure, fingering patterns, and melodic gamakas.',
     iconName: 'Wind',
-    imageUrl: 'https://images.unsplash.com/photo-1541689592655-f5f52825a3b8?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/nadaswaram-flute.png',
     targetAudience: 'Age 9+ to Adults',
     duration: 'Beginner to Concert Performer',
     schedule: 'Dedicated Guru-Sishya Sessions',
