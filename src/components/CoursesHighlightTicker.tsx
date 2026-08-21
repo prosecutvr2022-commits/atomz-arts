@@ -47,21 +47,21 @@ export const CoursesHighlightTicker: React.FC<CoursesHighlightTickerProps> = ({ 
   ];
 
   return (
-    <div className="relative bg-[#181020] py-8 border-b border-[#D4AF37]/30 overflow-hidden">
+    <div className="relative bg-[#FAF5FC] py-10 border-b border-purple-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
           <div>
-            <span className="font-cinzel text-xs font-bold uppercase tracking-widest text-[#D4AF37]">
+            <span className="font-cinzel text-xs font-bold uppercase tracking-widest text-[#800080]">
               Multi-Disciplinary Disciplines
             </span>
-            <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white mt-0.5">
+            <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-slate-900 mt-0.5">
               Explore Our Core Academy Pillars
             </h3>
           </div>
 
           <button
             onClick={() => onNavigate('classes')}
-            className="text-xs sm:text-sm font-bold text-amber-300 hover:text-white underline underline-offset-4 transition-colors cursor-pointer"
+            className="text-xs sm:text-sm font-bold text-[#800080] hover:text-[#580058] underline underline-offset-4 transition-colors cursor-pointer"
           >
             View Complete 21+ Course Syllabus →
           </button>
@@ -76,26 +76,26 @@ export const CoursesHighlightTicker: React.FC<CoursesHighlightTickerProps> = ({ 
                 key={idx}
                 whileHover={{ y: -4 }}
                 onClick={() => onNavigate('classes')}
-                className="group p-4 rounded-2xl bg-gradient-to-b from-white/10 to-white/5 hover:from-white/15 hover:to-white/10 border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all cursor-pointer flex flex-col justify-between"
+                className="group p-4 rounded-2xl bg-white hover:bg-[#FAF5FC] border border-purple-100 hover:border-[#800080] shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
               >
                 <div className="space-y-2">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#D4AF37] to-[#851424] p-0.5 shadow-md">
-                    <div className="w-full h-full rounded-[10px] bg-[#140E17] flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-amber-300" />
+                  <div className="w-10 h-10 rounded-xl bg-[#800080] p-0.5 shadow-xs">
+                    <div className="w-full h-full rounded-[10px] bg-[#800080] flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-white" />
                     </div>
                   </div>
 
                   <div>
-                    <h4 className="font-cinzel text-sm font-bold text-white group-hover:text-amber-200 transition-colors">
+                    <h4 className="font-cinzel text-sm font-bold text-slate-900 group-hover:text-[#800080] transition-colors">
                       {cat.title}
                     </h4>
-                    <p className="font-tamil text-[11px] text-amber-300/80 font-medium">
+                    <p className="font-tamil text-[11px] text-[#800080] font-semibold">
                       {cat.tamil}
                     </p>
                   </div>
                 </div>
 
-                <p className="mt-3 text-[11px] text-slate-300 font-light leading-relaxed">
+                <p className="mt-3 text-[11px] text-slate-600 font-normal leading-relaxed">
                   {cat.items}
                 </p>
               </motion.div>

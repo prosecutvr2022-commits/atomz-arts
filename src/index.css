@@ -42,37 +42,48 @@
   font-family: var(--font-tamil);
 }
 
-/* Cultural Gold Shimmer & Gradients */
+/* Purple Theme Shimmer & Gradients */
+.purple-gradient-text {
+  background: linear-gradient(135deg, #800080 0%, #A81CA8 50%, #580058 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .gold-gradient-text {
-  background: linear-gradient(135deg, #FDE68A 0%, #D4AF37 40%, #B4831B 70%, #F59E0B 100%);
+  background: linear-gradient(135deg, #800080 0%, #A81CA8 50%, #580058 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gold-gradient-bg {
-  background: linear-gradient(135deg, #D4AF37 0%, #B4831B 100%);
+  background: #800080;
+  color: #FFFFFF;
+}
+
+.purple-gradient-bg {
+  background: linear-gradient(135deg, #800080 0%, #5E005E 100%);
 }
 
 .maroon-gradient {
-  background: linear-gradient(135deg, #851424 0%, #5E0B16 50%, #3B060D 100%);
+  background: linear-gradient(135deg, #800080 0%, #5E005E 100%);
 }
 
 .royal-blue-gradient {
-  background: linear-gradient(135deg, #163866 0%, #0D223F 60%, #061120 100%);
+  background: linear-gradient(135deg, #800080 0%, #4D004D 100%);
 }
 
-/* Indian Traditional Pattern & Motif Overlays */
+/* Elegant Soft Pattern & Motif Overlays */
 .bg-mandala-pattern {
-  background-color: #FAF7F2;
-  background-image: radial-gradient(#D4AF37 0.75px, transparent 0.75px), radial-gradient(#851424 0.75px, #FAF7F2 0.75px);
+  background-color: #FAF5FC;
+  background-image: radial-gradient(#800080 0.6px, transparent 0.6px), radial-gradient(#800080 0.6px, #FAF5FC 0.6px);
   background-size: 30px 30px;
   background-position: 0 0, 15px 15px;
-  background-opacity: 0.04;
+  opacity: 0.98;
 }
 
 .bg-dark-mandala {
-  background-color: #140E17;
-  background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 0), radial-gradient(rgba(133, 20, 36, 0.2) 1px, #140E17 1px);
+  background-color: #800080;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 0), radial-gradient(rgba(255, 255, 255, 0.1) 1px, #800080 1px);
   background-size: 32px 32px;
   background-position: 0 0, 16px 16px;
 }
@@ -83,30 +94,34 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F4EFE6;
+  background: #FAF5FC;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4AF37;
+  background: #800080;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #851424;
+  background: #5E005E;
 }
 
-/* Animated Golden Glow */
-@keyframes goldPulse {
+/* Animated Purple Glow */
+@keyframes purplePulse {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3), 0 0 30px rgba(133, 20, 36, 0.15);
+    box-shadow: 0 0 15px rgba(128, 0, 128, 0.25), 0 0 30px rgba(128, 0, 128, 0.1);
   }
   50% {
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6), 0 0 45px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 0 25px rgba(128, 0, 128, 0.5), 0 0 45px rgba(128, 0, 128, 0.2);
   }
 }
 
 .animate-gold-glow {
-  animation: goldPulse 4s ease-in-out infinite;
+  animation: purplePulse 4s ease-in-out infinite;
+}
+
+.animate-purple-glow {
+  animation: purplePulse 4s ease-in-out infinite;
 }
 
 /* Subtle float */

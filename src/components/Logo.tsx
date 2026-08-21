@@ -264,11 +264,11 @@ export const Logo: React.FC<LogoProps> = ({
 
         {/* ATOMZ with 3D Globe */}
         <div className="mt-3 flex items-center justify-center font-black tracking-wider leading-none">
-          <span className={`font-cinzel font-black tracking-wider ${currentScale.title} ${lightMode ? 'text-[#101538]' : 'text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#FFF1B8] to-[#F3C64F]'}`}>
+          <span className={`font-cinzel font-black tracking-wider ${currentScale.title} ${lightMode ? 'text-[#800080]' : 'text-white'}`}>
             AT
           </span>
           <GlobeO className={size === '2xl' ? 'w-8 h-8 sm:w-10 sm:h-10 mx-1' : size === 'xl' ? 'w-6 h-6 sm:w-8 sm:h-8 mx-1' : 'w-5 h-5 sm:w-6 sm:h-6 mx-0.5'} />
-          <span className={`font-cinzel font-black tracking-wider ${currentScale.title} ${lightMode ? 'text-[#101538]' : 'text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#FFF1B8] to-[#F3C64F]'}`}>
+          <span className={`font-cinzel font-black tracking-wider ${currentScale.title} ${lightMode ? 'text-[#800080]' : 'text-white'}`}>
             MZ
           </span>
         </div>
@@ -283,7 +283,7 @@ export const Logo: React.FC<LogoProps> = ({
         {/* Script Slogan: Heart of Arts..... */}
         {showTagline && (
           <div className="mt-1 flex items-center gap-1.5 justify-center">
-            <span className={`font-serif italic font-bold tracking-wide ${currentScale.tagline} ${lightMode ? 'text-[#101538]' : 'text-[#FFE898]'}`}>
+            <span className={`font-serif italic font-bold tracking-wide ${currentScale.tagline} ${lightMode ? 'text-[#800080]' : 'text-purple-200'}`}>
               Heart of Arts . . . . .
             </span>
           </div>
@@ -307,8 +307,8 @@ export const Logo: React.FC<LogoProps> = ({
           <span
             className={`font-cinzel font-black tracking-tight ${currentScale.title} ${
               lightMode
-                ? 'text-[#101538]'
-                : 'text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#FFF1B8] to-[#F3C64F]'
+                ? 'text-[#800080]'
+                : 'text-white'
             }`}
           >
             AT
@@ -327,8 +327,8 @@ export const Logo: React.FC<LogoProps> = ({
           <span
             className={`font-cinzel font-black tracking-tight ${currentScale.title} ${
               lightMode
-                ? 'text-[#101538]'
-                : 'text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#FFF1B8] to-[#F3C64F]'
+                ? 'text-[#800080]'
+                : 'text-white'
             }`}
           >
             MZ
@@ -349,15 +349,15 @@ export const Logo: React.FC<LogoProps> = ({
           <div className="flex items-center gap-1.5 mt-1 sm:mt-1.5 flex-wrap leading-tight">
             <span
               className={`font-serif italic font-bold tracking-wide ${currentScale.tagline} ${
-                lightMode ? 'text-[#851424]' : 'text-[#FFE898]'
+                lightMode ? 'text-[#800080]' : 'text-purple-200'
               }`}
             >
               Heart of Arts . . . . .
             </span>
-            <span className="hidden sm:inline text-[9px] text-amber-500/80">•</span>
+            <span className="hidden sm:inline text-[9px] text-[#800080]/60">•</span>
             <span
               className={`hidden sm:inline font-tamil text-[10px] sm:text-[11px] font-semibold tracking-normal ${
-                lightMode ? 'text-slate-600' : 'text-slate-300'
+                lightMode ? 'text-slate-600' : 'text-purple-100'
               }`}
             >
               ஆட்டம்ஸ் ஆர்ட்ஸ் அகாடமி

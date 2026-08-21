@@ -33,25 +33,24 @@ export const ClassesPage: React.FC<ClassesPageProps> = ({
   });
 
   return (
-    <div className="bg-[#FAF9F6] text-slate-900 min-h-screen">
+    <div className="bg-white text-slate-900 min-h-screen">
       {/* Header Banner */}
-      <section className="relative py-16 sm:py-20 bg-[#600000] text-white border-b border-[#D4AF37]/30 overflow-hidden">
-        <div className="absolute inset-0 bg-dark-mandala opacity-25 pointer-events-none" />
+      <section className="relative py-16 sm:py-20 bg-[#800080] text-white border-b border-purple-900 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/10 border border-[#D4AF37]/50 text-amber-200 text-xs font-bold uppercase tracking-widest">
-            <Sparkles className="w-4 h-4 text-amber-300" />
+          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white text-[#800080] text-xs font-bold uppercase tracking-widest shadow-sm">
+            <Sparkles className="w-4 h-4 text-[#800080]" />
             <span>Comprehensive 21+ Academy Curriculum</span>
           </div>
 
-          <h1 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight">
-            Our Courses & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF1B8] to-[#D4AF37]">Training Programs</span>
+          <h1 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white">
+            Our Courses & <span className="text-purple-200">Training Programs</span>
           </h1>
 
-          <p className="font-tamil text-xl sm:text-2xl text-amber-200 font-bold max-w-2xl mx-auto">
+          <p className="font-tamil text-xl sm:text-2xl text-purple-200 font-bold max-w-2xl mx-auto">
             பரதநாட்டியம், கர்நாடக இசை, டியூஷன் முதல் ஆரி வேலைப்பாடுகள் வரை
           </p>
 
-          <p className="text-slate-200 text-sm sm:text-base max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-purple-100 text-sm sm:text-base max-w-3xl mx-auto font-normal leading-relaxed">
             Choose from classical performing arts, vocal and instrument training, school syllabus tuitions, language mastery, cognitive memory sports, and professional craft certifications.
           </p>
         </div>
@@ -60,7 +59,7 @@ export const ClassesPage: React.FC<ClassesPageProps> = ({
       {/* Main Course Listing Section */}
       <section className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Filter Controls & Search */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 mb-8 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 mb-8 bg-white p-4 rounded-2xl border border-purple-100 shadow-xs">
           {/* Category Tabs */}
           <div className="flex items-center gap-1.5 overflow-x-auto w-full lg:w-auto pb-2 lg:pb-0 scrollbar-none">
             {CATEGORY_FILTERS.map(filter => {
@@ -71,8 +70,8 @@ export const ClassesPage: React.FC<ClassesPageProps> = ({
                   onClick={() => setSelectedCategory(filter.id as CourseCategory)}
                   className={`px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
                     isActive
-                      ? 'bg-[#600000] text-white shadow-md border border-[#D4AF37]/50'
-                      : 'bg-slate-50 hover:bg-amber-50 text-slate-700 border border-slate-200'
+                      ? 'bg-[#800080] text-white shadow-md border border-purple-300'
+                      : 'bg-purple-50 hover:bg-purple-100 text-slate-700 border border-purple-200'
                   }`}
                 >
                   {filter.label}
@@ -83,13 +82,13 @@ export const ClassesPage: React.FC<ClassesPageProps> = ({
 
           {/* Search Box */}
           <div className="relative w-full lg:w-80">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
+            <Search className="w-4 h-4 text-purple-400 absolute left-3.5 top-3" />
             <input
               type="text"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               placeholder="Search by course name, instrument or கலை..."
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-xs sm:text-sm focus:outline-none focus:border-[#600000] focus:ring-2 focus:ring-[#600000]/10"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-purple-200 text-xs sm:text-sm focus:outline-none focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/10 text-slate-900"
             />
           </div>
         </div>
@@ -99,7 +98,7 @@ export const ClassesPage: React.FC<ClassesPageProps> = ({
           <span>
             Showing <strong>{filteredCourses.length}</strong> of {ALL_COURSES.length} courses
           </span>
-          <span className="text-amber-800 font-semibold">
+          <span className="text-[#800080] font-semibold">
             ✦ All courses have flexible batch timings
           </span>
         </div>
@@ -117,8 +116,8 @@ export const ClassesPage: React.FC<ClassesPageProps> = ({
             ))}
           </div>
         ) : (
-          <div className="text-center py-20 bg-white rounded-3xl border border-slate-200 p-8 space-y-4">
-            <BookOpen className="w-12 h-12 text-slate-300 mx-auto" />
+          <div className="text-center py-20 bg-white rounded-3xl border border-purple-100 p-8 space-y-4">
+            <BookOpen className="w-12 h-12 text-purple-300 mx-auto" />
             <h3 className="font-cinzel text-lg font-bold text-slate-800">
               No matching courses found
             </h3>
@@ -130,7 +129,7 @@ export const ClassesPage: React.FC<ClassesPageProps> = ({
                 setSearchQuery('');
                 setSelectedCategory('all');
               }}
-              className="px-5 py-2.5 rounded-xl bg-[#600000] text-white text-xs font-bold hover:bg-[#800000] transition-colors"
+              className="px-5 py-2.5 rounded-xl bg-[#800080] text-white text-xs font-bold hover:bg-[#680068] transition-colors"
             >
               Show All Courses
             </button>
@@ -138,34 +137,34 @@ export const ClassesPage: React.FC<ClassesPageProps> = ({
         )}
 
         {/* FAQ or Guidelines banner */}
-        <div className="mt-16 p-8 rounded-3xl bg-[#002366] text-white space-y-6">
+        <div className="mt-16 p-8 rounded-3xl bg-[#680068] text-white space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#D4AF37]">
+              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-purple-200">
                 <Clock className="w-5 h-5" />
               </div>
-              <h4 className="font-cinzel text-sm font-bold text-[#D4AF37]">Batch Timings</h4>
-              <p className="text-xs text-slate-200 leading-relaxed">
+              <h4 className="font-cinzel text-sm font-bold text-purple-200">Batch Timings</h4>
+              <p className="text-xs text-purple-100 leading-relaxed font-normal">
                 Morning batches (6:30 AM – 9:00 AM) and Evening batches (4:00 PM – 8:30 PM). Special Saturday & Sunday intensive sessions available.
               </p>
             </div>
 
             <div className="space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#D4AF37]">
+              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-purple-200">
                 <Award className="w-5 h-5" />
               </div>
-              <h4 className="font-cinzel text-sm font-bold text-[#D4AF37]">Exams & Diplomas</h4>
-              <p className="text-xs text-slate-200 leading-relaxed">
+              <h4 className="font-cinzel text-sm font-bold text-purple-200">Exams & Diplomas</h4>
+              <p className="text-xs text-purple-100 leading-relaxed font-normal">
                 Regular grade examinations through certified music/dance universities and institutions, plus annual performance certificates.
               </p>
             </div>
 
             <div className="space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#D4AF37]">
+              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-purple-200">
                 <Users className="w-5 h-5" />
               </div>
-              <h4 className="font-cinzel text-sm font-bold text-[#D4AF37]">Trial Sessions</h4>
-              <p className="text-xs text-slate-200 leading-relaxed">
+              <h4 className="font-cinzel text-sm font-bold text-purple-200">Trial Sessions</h4>
+              <p className="text-xs text-purple-100 leading-relaxed font-normal">
                 We offer free assessment and demo sessions to help students find their natural passion and talent before final enrollment.
               </p>
             </div>

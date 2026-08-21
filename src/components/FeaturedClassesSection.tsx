@@ -29,20 +29,20 @@ export const FeaturedClassesSection: React.FC<FeaturedClassesSectionProps> = ({
   });
 
   return (
-    <section className="py-20 bg-[#F4EFE6] text-slate-900 border-b border-[#D4AF37]/30">
+    <section className="py-20 bg-[#FAF5FC] text-slate-900 border-b border-purple-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-[#851424]/10 border border-[#851424]/20 text-[#851424] text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-4 h-4 text-[#D4AF37]" />
+          <div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-purple-100 border border-purple-200 text-[#800080] text-xs font-bold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4 text-[#800080]" />
             <span>Curriculum & Disciplines</span>
           </div>
 
-          <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1E1926] tracking-tight">
+          <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
             Featured Classes & Training
           </h2>
 
-          <p className="font-tamil text-base sm:text-lg text-[#851424] font-semibold">
+          <p className="font-tamil text-base sm:text-lg text-[#800080] font-semibold">
             பயிற்றுவிக்கப்படும் 21+ சிறப்பு பயிற்சி வகுப்புகள்
           </p>
 
@@ -63,8 +63,8 @@ export const FeaturedClassesSection: React.FC<FeaturedClassesSectionProps> = ({
                   onClick={() => setSelectedCategory(filter.id as CourseCategory)}
                   className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all cursor-pointer ${
                     isActive
-                      ? 'bg-[#851424] text-white shadow-md border border-[#D4AF37]/50'
-                      : 'bg-white hover:bg-amber-50 text-slate-700 border border-slate-200'
+                      ? 'bg-[#800080] text-white shadow-md border border-purple-300'
+                      : 'bg-white hover:bg-purple-50 text-slate-700 border border-purple-200'
                   }`}
                 >
                   <span>{filter.label}</span>
@@ -75,13 +75,13 @@ export const FeaturedClassesSection: React.FC<FeaturedClassesSectionProps> = ({
 
           {/* Quick Search */}
           <div className="relative w-full md:w-72">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
+            <Search className="w-4 h-4 text-purple-400 absolute left-3.5 top-3" />
             <input
               type="text"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               placeholder="Search course or கலை..."
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-slate-300 text-sm focus:outline-none focus:border-[#851424] focus:ring-2 focus:ring-[#851424]/10 shadow-sm"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-purple-200 text-sm focus:outline-none focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/10 shadow-xs text-slate-900"
             />
           </div>
         </div>
@@ -99,7 +99,7 @@ export const FeaturedClassesSection: React.FC<FeaturedClassesSectionProps> = ({
             ))}
           </div>
         ) : (
-          <div className="text-center py-16 bg-white rounded-2xl border border-slate-200 p-8 space-y-3">
+          <div className="text-center py-16 bg-white rounded-2xl border border-purple-200 p-8 space-y-3">
             <p className="text-slate-600 text-sm">
               No classes matched your search term "{searchQuery}".
             </p>
@@ -108,7 +108,7 @@ export const FeaturedClassesSection: React.FC<FeaturedClassesSectionProps> = ({
                 setSearchQuery('');
                 setSelectedCategory('all');
               }}
-              className="px-5 py-2 rounded-xl bg-[#851424] text-white text-xs font-bold"
+              className="px-5 py-2 rounded-xl bg-[#800080] text-white text-xs font-bold"
             >
               Reset Filters
             </button>
@@ -122,7 +122,7 @@ export const FeaturedClassesSection: React.FC<FeaturedClassesSectionProps> = ({
               onNavigate('classes');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full gold-gradient-bg text-slate-950 font-extrabold text-sm sm:text-base shadow-lg hover:shadow-amber-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#800080] hover:bg-[#680068] text-white font-extrabold text-sm sm:text-base shadow-lg hover:shadow-purple-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
           >
             <BookOpen className="w-5 h-5" />
             <span>Explore Complete 21+ Courses Directory with Syllabus</span>

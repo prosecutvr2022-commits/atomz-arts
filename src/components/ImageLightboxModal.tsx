@@ -40,12 +40,12 @@ export const ImageLightboxModal: React.FC<ImageLightboxModalProps> = ({ item, on
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          className="relative max-w-4xl w-full bg-[#180F1E] border border-[#D4AF37]/50 rounded-3xl overflow-hidden shadow-2xl z-10 flex flex-col"
+          className="relative max-w-4xl w-full bg-slate-900 border border-purple-500/50 rounded-3xl overflow-hidden shadow-2xl z-10 flex flex-col"
         >
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-[#600000] text-white flex items-center justify-center border border-[#D4AF37]/40 transition-colors cursor-pointer"
+            className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-[#800080] text-white flex items-center justify-center border border-purple-400/40 transition-colors cursor-pointer"
             aria-label="Close"
           >
             <X className="w-5 h-5" />
@@ -67,20 +67,20 @@ export const ImageLightboxModal: React.FC<ImageLightboxModalProps> = ({ item, on
           </div>
 
           {/* Details Bar */}
-          <div className="p-6 sm:p-8 bg-[#160E1A] border-t border-[#D4AF37]/30 text-white space-y-3">
+          <div className="p-6 sm:p-8 bg-slate-900 border-t border-purple-800/40 text-white space-y-3">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center gap-2">
-                <span className="px-3 py-1 rounded-full bg-[#600000] text-[#FFF1B8] border border-[#D4AF37]/40 text-xs font-bold font-cinzel">
+                <span className="px-3 py-1 rounded-full bg-[#800080] text-white border border-purple-400 text-xs font-bold font-cinzel">
                   {item.categoryLabel}
                 </span>
                 {item.date && (
                   <span className="text-xs text-slate-300 flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5 text-[#D4AF37]" />
+                    <Calendar className="w-3.5 h-3.5 text-purple-300" />
                     {item.date}
                   </span>
                 )}
               </div>
-              <span className="text-xs text-amber-300 font-serif italic">
+              <span className="text-xs text-purple-200 font-serif italic">
                 Atomz Arts Academy, Thiruvarur
               </span>
             </div>
@@ -89,12 +89,12 @@ export const ImageLightboxModal: React.FC<ImageLightboxModalProps> = ({ item, on
               <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white">
                 {item.title}
               </h3>
-              <p className="font-tamil text-base sm:text-lg text-amber-300 font-bold mt-0.5">
+              <p className="font-tamil text-base sm:text-lg text-purple-200 font-bold mt-0.5">
                 {item.tamilTitle}
               </p>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
               {item.caption}
             </p>
           </div>

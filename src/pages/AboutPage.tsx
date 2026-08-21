@@ -62,17 +62,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenEnquiry 
   ];
 
   return (
-    <div className="bg-[#FAF9F6] text-slate-900">
+    <div className="bg-white text-slate-900">
       {/* Header Banner */}
-      <section className="relative py-20 bg-[#600000] text-white border-b border-[#D4AF37]/30 overflow-hidden">
-        <div className="absolute inset-0 bg-dark-mandala opacity-30 pointer-events-none" />
+      <section className="relative py-20 bg-[#800080] text-white border-b border-purple-900 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 z-10">
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/10 border border-[#D4AF37]/50 text-amber-200 text-xs font-bold uppercase tracking-widest"
+            className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white text-[#800080] text-xs font-bold uppercase tracking-widest shadow-sm"
           >
-            <Sparkles className="w-4 h-4 text-amber-300" />
+            <Sparkles className="w-4 h-4 text-[#800080]" />
             <span>Legacy of Thiruvarur Classical Arts</span>
           </motion.div>
 
@@ -80,16 +79,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenEnquiry 
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="font-cinzel text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight"
+            className="font-cinzel text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white"
           >
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF1B8] to-[#D4AF37]">Atomz Arts Academy</span>
+            About <span className="text-purple-200">Atomz Arts Academy</span>
           </motion.h1>
 
-          <p className="font-tamil text-xl sm:text-2xl text-amber-200 font-bold max-w-2xl mx-auto">
+          <p className="font-tamil text-xl sm:text-2xl text-purple-200 font-bold max-w-2xl mx-auto">
             கலை, பண்பாடு, கல்வி மற்றும் வாழ்வியல் திறன்களை வளர்க்கும் திருவாரூரின் முதன்மை மையம்
           </p>
 
-          <p className="text-slate-200 text-base max-w-3xl mx-auto font-light leading-relaxed pt-2">
+          <p className="text-purple-100 text-base max-w-3xl mx-auto font-normal leading-relaxed pt-2">
             Atomz Arts Academy was founded in Thiruvarur with a singular sacred mission: to kindle artistic brilliance, preserve rich Tamil cultural traditions, and foster 21st-century academic and vocational excellence under one nurturing sanctuary.
           </p>
         </div>
@@ -99,40 +98,40 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenEnquiry 
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#600000]">
-              <Compass className="w-4 h-4 text-[#D4AF37]" />
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#800080]">
+              <Compass className="w-4 h-4 text-[#800080]" />
               <span>Our Roots & Sacred Soil</span>
             </div>
 
-            <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-[#1a1a1a] leading-tight">
+            <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
               Rooted in the Musical & Cultural Cradle of Thiruvarur
             </h2>
 
-            <p className="text-slate-700 leading-relaxed">
+            <p className="text-slate-700 leading-relaxed font-normal">
               Thiruvarur is historically known as the sanctum of the Trinity of Carnatic Music — Sri Tyagaraja, Sri Muthuswami Dikshitar, and Sri Syama Sastri — and the seat of the majestic Thyagaraja Temple and Azhi Ther car festival. 
             </p>
 
-            <p className="text-slate-700 leading-relaxed">
+            <p className="text-slate-700 leading-relaxed font-normal">
               Atomz Arts Academy draws inspiration from this rich soil. We understand that classical arts are not just hobbies, but spiritual disciplines that cultivate focus, emotional equilibrium, rhythm, and self-confidence.
             </p>
 
-            <div className="p-6 rounded-2xl bg-[#002366] text-white shadow-lg space-y-3">
-              <h3 className="font-cinzel text-lg font-bold text-[#D4AF37]">
+            <div className="p-6 rounded-2xl bg-purple-900 text-white shadow-lg space-y-3">
+              <h3 className="font-cinzel text-lg font-bold text-purple-200">
                 The Academy Philosophy
               </h3>
-              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+              <p className="text-xs sm:text-sm text-purple-100 leading-relaxed font-normal">
                 "Every child is born with an inherent spark. By combining disciplined classical training with compassionate teaching and modern cognitive exercises, we build confident, culturally anchored citizens."
               </p>
             </div>
 
             {/* Official Academy Seal Showcase */}
-            <div className="p-4 rounded-2xl bg-white border border-[#D4AF37]/50 shadow-md flex items-center gap-4">
+            <div className="p-4 rounded-2xl bg-white border border-purple-200 shadow-md flex items-center gap-4">
               <div className="w-14 h-16 sm:w-16 sm:h-20 flex-shrink-0">
                 <Logo size="lg" variant="crest" />
               </div>
               <div className="min-w-0">
-                <h4 className="font-cinzel text-sm font-bold text-[#600000]">Official Academy Seal</h4>
-                <p className="text-xs text-slate-600 mt-0.5 leading-relaxed">
+                <h4 className="font-cinzel text-sm font-bold text-[#800080]">Official Academy Seal</h4>
+                <p className="text-xs text-slate-600 mt-0.5 leading-relaxed font-normal">
                   Incorporates Yoga (Padmasana), Academic Tuitions, Bharatanatyam, Martial Arts, and our Global Arts vision.
                 </p>
               </div>
@@ -140,16 +139,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenEnquiry 
           </div>
 
           <div className="lg:col-span-6">
-            <div className="relative rounded-3xl p-3 bg-gradient-to-b from-[#D4AF37]/50 via-[#600000]/40 to-[#002366]/40 shadow-xl">
+            <div className="relative rounded-3xl p-3 bg-purple-100 shadow-xl border border-purple-200">
               <img
                 src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=900&auto=format&fit=crop"
                 alt="Classical Indian Fine Arts and Learning"
                 referrerPolicy="no-referrer"
                 className="w-full h-96 object-cover rounded-2xl"
               />
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-black/75 backdrop-blur-md text-white border border-[#D4AF37]/40">
-                <div className="font-cinzel text-sm font-bold text-amber-300">Puthu Theru, Thiruvarur</div>
-                <div className="text-xs text-slate-300">Serving students across Thiruvarur and Kaveri Delta districts</div>
+              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#800080]/90 backdrop-blur-md text-white border border-purple-300/40">
+                <div className="font-cinzel text-sm font-bold text-white">Puthu Theru, Thiruvarur</div>
+                <div className="text-xs text-purple-200">Serving students across Thiruvarur and Kaveri Delta districts</div>
               </div>
             </div>
           </div>
@@ -157,16 +156,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenEnquiry 
       </section>
 
       {/* Core Values */}
-      <section className="py-16 bg-[#FAF7F2] border-y border-[#D4AF37]/30">
+      <section className="py-16 bg-[#FAF5FC] border-y border-purple-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto space-y-2 mb-12">
-            <span className="font-cinzel text-xs font-bold uppercase tracking-widest text-[#600000]">
+            <span className="font-cinzel text-xs font-bold uppercase tracking-widest text-[#800080]">
               Our Guiding Pillars
             </span>
             <h2 className="font-cinzel text-3xl font-extrabold text-slate-900">
               Core Values of Atomz Academy
             </h2>
-            <p className="font-tamil text-sm text-[#600000] font-semibold">
+            <p className="font-tamil text-sm text-[#800080] font-semibold">
               எங்கள் வழிகாட்டும் நற்பண்புகள்
             </p>
           </div>
@@ -175,14 +174,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenEnquiry 
             {values.map((v, i) => (
               <div
                 key={i}
-                className="p-6 rounded-2xl bg-white border border-[#600000]/10 hover:border-[#D4AF37] shadow-sm hover:shadow-lg transition-all"
+                className="p-6 rounded-2xl bg-white border border-purple-100 hover:border-[#800080] shadow-xs hover:shadow-lg transition-all"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#600000] text-[#D4AF37] flex items-center justify-center font-cinzel font-bold text-sm mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#800080] text-white flex items-center justify-center font-cinzel font-bold text-sm mb-4">
                   0{i + 1}
                 </div>
                 <h3 className="font-cinzel text-base font-bold text-slate-900 mb-1">{v.title}</h3>
-                <p className="font-tamil text-xs text-[#600000] font-semibold mb-2">{v.tamil}</p>
-                <p className="text-xs text-slate-600 leading-relaxed">{v.desc}</p>
+                <p className="font-tamil text-xs text-[#800080] font-semibold mb-2">{v.tamil}</p>
+                <p className="text-xs text-slate-600 leading-relaxed font-normal">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -192,13 +191,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenEnquiry 
       {/* Faculty & Pedagogy */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto space-y-2 mb-12">
-          <span className="font-cinzel text-xs font-bold uppercase tracking-widest text-[#600000]">
+          <span className="font-cinzel text-xs font-bold uppercase tracking-widest text-[#800080]">
             Dedicated Faculty
           </span>
           <h2 className="font-cinzel text-3xl font-extrabold text-slate-900">
             Our Mentors & Masters
           </h2>
-          <p className="font-tamil text-sm text-[#600000] font-semibold">
+          <p className="font-tamil text-sm text-[#800080] font-semibold">
             அனுபவமிக்க ஆசான்கள் மற்றும் வழிகாட்டிகள்
           </p>
         </div>
@@ -207,43 +206,43 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenEnquiry 
           {facultyHighlights.map((f, i) => (
             <div
               key={i}
-              className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#600000] shadow-sm space-y-3"
+              className="p-6 rounded-2xl bg-white border border-purple-100 hover:border-[#800080] shadow-xs space-y-3"
             >
-              <div className="w-12 h-12 rounded-full bg-[#600000]/10 text-[#600000] flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-purple-100 text-[#800080] flex items-center justify-center">
                 <Users className="w-6 h-6" />
               </div>
               <div>
                 <h3 className="font-cinzel text-sm font-bold text-slate-900">{f.name}</h3>
-                <p className="font-tamil text-xs text-[#600000] font-semibold">{f.tamil}</p>
+                <p className="font-tamil text-xs text-[#800080] font-semibold">{f.tamil}</p>
               </div>
-              <div className="text-[11px] font-bold text-[#002366] bg-blue-50 px-2.5 py-1 rounded-md inline-block">
+              <div className="text-[11px] font-bold text-[#800080] bg-purple-50 px-2.5 py-1 rounded-md inline-block">
                 {f.exp}
               </div>
-              <p className="text-xs text-slate-600 leading-relaxed">{f.desc}</p>
+              <p className="text-xs text-slate-600 leading-relaxed font-normal">{f.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Call to action */}
-      <section className="py-16 bg-[#600000] text-white">
+      <section className="py-16 bg-[#800080] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
           <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-white">
             Experience the Joy of Learning at Atomz
           </h2>
-          <p className="text-slate-200 text-sm sm:text-base">
+          <p className="text-purple-100 text-sm sm:text-base font-normal">
             Enroll your children or yourself today. Classes are available with flexible weekday and weekend morning/evening slots.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <button
               onClick={() => onNavigate('classes')}
-              className="px-7 py-3 rounded-full gold-gradient-bg text-slate-950 font-bold text-sm shadow-lg hover:scale-105 transition-all cursor-pointer"
+              className="px-7 py-3 rounded-full bg-white hover:bg-purple-50 text-[#800080] font-bold text-sm shadow-lg hover:scale-105 transition-all cursor-pointer"
             >
               Explore 21+ Courses
             </button>
             <button
               onClick={onOpenEnquiry}
-              className="px-7 py-3 rounded-full border border-white/40 hover:bg-white/10 text-white font-bold text-sm transition-all cursor-pointer"
+              className="px-7 py-3 rounded-full border-2 border-white hover:bg-white/10 text-white font-bold text-sm transition-all cursor-pointer"
             >
               Contact Admissions
             </button>

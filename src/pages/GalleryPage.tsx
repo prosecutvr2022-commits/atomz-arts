@@ -16,26 +16,25 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onSelectImage }) => {
   });
 
   return (
-    <div className="bg-[#FAF9F6] text-slate-900 min-h-screen">
+    <div className="bg-white text-slate-900 min-h-screen">
       {/* Header Banner */}
-      <section className="relative py-16 sm:py-20 bg-[#600000] text-white border-b border-[#D4AF37]/30 overflow-hidden">
-        <div className="absolute inset-0 bg-dark-mandala opacity-25 pointer-events-none" />
+      <section className="relative py-16 sm:py-20 bg-[#800080] text-white border-b border-purple-900 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/10 border border-[#D4AF37]/50 text-amber-200 text-xs font-bold uppercase tracking-widest">
-            <Sparkles className="w-4 h-4 text-amber-300" />
+          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white text-[#800080] text-xs font-bold uppercase tracking-widest shadow-sm">
+            <Sparkles className="w-4 h-4 text-[#800080]" />
             <span>Academy Gallery & Moments</span>
           </div>
 
-          <h1 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight">
+          <h1 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white">
             Performances, Arangetrams & <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF1B8] to-[#D4AF37]">Classroom Memories</span>
+            <span className="text-purple-200">Classroom Memories</span>
           </h1>
 
-          <p className="font-tamil text-xl sm:text-2xl text-amber-200 font-bold max-w-2xl mx-auto">
+          <p className="font-tamil text-xl sm:text-2xl text-purple-200 font-bold max-w-2xl mx-auto">
             எங்கள் மாணவர்களின் அரங்கேற்றங்கள், இசை கச்சேரிகள் மற்றும் கலை பயிலரங்குகள்
           </p>
 
-          <p className="text-slate-200 text-sm sm:text-base max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-purple-100 text-sm sm:text-base max-w-3xl mx-auto font-normal leading-relaxed">
             Witness the vibrant energy of our students mastering ancient dance poses, tuning intricate ragas on the veena, excelling in chess, creating aari couture, and shining on stage.
           </p>
         </div>
@@ -53,8 +52,8 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onSelectImage }) => {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                   isActive
-                    ? 'bg-[#600000] text-white shadow-md border border-[#D4AF37]/50'
-                    : 'bg-white hover:bg-amber-50 text-slate-700 border border-slate-200'
+                    ? 'bg-[#800080] text-white shadow-md border border-purple-300'
+                    : 'bg-white hover:bg-purple-50 text-slate-700 border border-purple-200'
                 }`}
               >
                 {category.label}
@@ -70,7 +69,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onSelectImage }) => {
               key={item.id}
               whileHover={{ y: -4 }}
               onClick={() => onSelectImage(item)}
-              className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-white border border-[#D4AF37]/30 cursor-pointer"
+              className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 bg-white border border-purple-100 cursor-pointer"
             >
               <div className="aspect-[4/3] overflow-hidden bg-slate-900 relative">
                 <img
@@ -87,20 +86,20 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onSelectImage }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all" />
 
                 <div className="absolute top-3 left-3">
-                  <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-[#600000] text-amber-200 border border-[#D4AF37]/30 shadow">
+                  <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-[#800080] text-white border border-purple-300 shadow">
                     {item.categoryLabel}
                   </span>
                 </div>
 
                 <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Eye className="w-4 h-4 text-amber-300" />
+                  <Eye className="w-4 h-4 text-purple-300" />
                 </div>
 
                 <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <h3 className="font-cinzel text-base font-bold text-[#FFF7E8]">
+                  <h3 className="font-cinzel text-base font-bold text-white">
                     {item.title}
                   </h3>
-                  <p className="font-tamil text-amber-300 text-xs font-semibold">
+                  <p className="font-tamil text-purple-200 text-xs font-semibold">
                     {item.tamilTitle}
                   </p>
                 </div>

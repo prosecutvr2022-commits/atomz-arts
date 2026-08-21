@@ -59,7 +59,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         {/* Prev Button */}
         <button
           onClick={handlePrev}
-          className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-white/10 hover:bg-[#D4AF37] hover:text-black text-white transition-all backdrop-blur-sm cursor-pointer shadow-lg"
+          className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-white/10 hover:bg-[#800080] hover:text-white text-white transition-all backdrop-blur-sm cursor-pointer shadow-lg"
           aria-label="Previous image"
         >
           <ChevronLeft className="w-6 h-6" />
@@ -68,7 +68,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         {/* Next Button */}
         <button
           onClick={handleNext}
-          className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-white/10 hover:bg-[#D4AF37] hover:text-black text-white transition-all backdrop-blur-sm cursor-pointer shadow-lg"
+          className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-white/10 hover:bg-[#800080] hover:text-white text-white transition-all backdrop-blur-sm cursor-pointer shadow-lg"
           aria-label="Next image"
         >
           <ChevronRight className="w-6 h-6" />
@@ -81,7 +81,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.96 }}
           transition={{ duration: 0.2 }}
-          className="relative max-w-5xl w-full max-h-[90vh] flex flex-col bg-[#140E17] border border-[#D4AF37]/40 rounded-2xl overflow-hidden shadow-2xl"
+          className="relative max-w-5xl w-full max-h-[90vh] flex flex-col bg-slate-950 border border-purple-500/40 rounded-2xl overflow-hidden shadow-2xl"
         >
           {/* Main Visual */}
           <div className="relative flex-1 bg-black flex items-center justify-center min-h-[320px] max-h-[65vh] overflow-hidden">
@@ -92,40 +92,40 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
               className="max-h-full max-w-full object-contain mx-auto select-none"
             />
             {/* Subtle Gradient vignette */}
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#140E17] via-transparent to-transparent opacity-80" />
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
           </div>
 
           {/* Metadata Footer */}
-          <div className="p-5 sm:p-6 bg-[#140E17] border-t border-[#D4AF37]/30 text-white space-y-2">
+          <div className="p-5 sm:p-6 bg-slate-950 border-t border-purple-800/30 text-white space-y-2">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center gap-2">
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-[#851424] text-amber-200 border border-[#D4AF37]/40">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-[#800080] text-white border border-purple-400">
                   <Tag className="w-3 h-3" />
                   {item.categoryLabel}
                 </span>
                 {item.date && (
                   <span className="inline-flex items-center gap-1 text-xs text-slate-400">
-                    <Calendar className="w-3 h-3 text-amber-400" />
+                    <Calendar className="w-3 h-3 text-purple-300" />
                     {item.date}
                   </span>
                 )}
               </div>
 
-              <span className="text-xs text-amber-300 font-mono">
+              <span className="text-xs text-purple-200 font-mono">
                 {currentIndex + 1} / {items.length}
               </span>
             </div>
 
             <div>
-              <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-[#FFF7E8]">
+              <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white">
                 {item.title}
               </h3>
-              <p className="font-tamil text-amber-300 text-sm font-medium mt-0.5">
+              <p className="font-tamil text-purple-200 text-sm font-semibold mt-0.5">
                 {item.tamilTitle}
               </p>
             </div>
 
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-3xl">
+            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-3xl font-normal">
               {item.caption}
             </p>
           </div>

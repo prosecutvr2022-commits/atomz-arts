@@ -43,7 +43,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF9F6] text-slate-900 font-outfit antialiased overflow-x-hidden w-full max-w-full selection:bg-[#600000] selection:text-[#FFF1B8]">
+    <div className="min-h-screen flex flex-col bg-[#FFFFFF] text-[#181124] font-outfit antialiased overflow-x-hidden w-full max-w-full selection:bg-[#800080] selection:text-white">
       {/* Global Navigation Bar */}
       <Navbar
         currentPage={currentPage}

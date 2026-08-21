@@ -13,18 +13,18 @@ export const GalleryPreview: React.FC<GalleryPreviewProps> = ({ onNavigate, onSe
   const featured = GALLERY_ITEMS.filter(item => item.featured).slice(0, 6);
 
   return (
-    <section className="py-20 bg-[#FAF7F2] text-slate-900 border-b border-[#D4AF37]/30">
+    <section className="py-20 bg-white text-slate-900 border-b border-purple-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-end justify-between gap-4 mb-12">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-[#851424]/10 border border-[#851424]/20 text-[#851424] text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-4 h-4 text-[#D4AF37]" />
+            <div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-purple-100 border border-purple-200 text-[#800080] text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="w-4 h-4 text-[#800080]" />
               <span>Moments of Grace & Excellence</span>
             </div>
-            <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-[#1E1926]">
+            <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-slate-900">
               Visual Showcase & Performances
             </h2>
-            <p className="font-tamil text-base text-[#851424] font-semibold">
+            <p className="font-tamil text-base text-[#800080] font-semibold">
               அரங்கேற்றம், இசை கச்சேரி மற்றும் பயிலரங்க நிகழ்வுகள்
             </p>
           </div>
@@ -34,7 +34,7 @@ export const GalleryPreview: React.FC<GalleryPreviewProps> = ({ onNavigate, onSe
               onNavigate('gallery');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#851424] hover:bg-[#6b0f1a] text-white text-xs sm:text-sm font-bold shadow-md transition-all cursor-pointer whitespace-nowrap"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#800080] hover:bg-[#680068] text-white text-xs sm:text-sm font-bold shadow-md transition-all cursor-pointer whitespace-nowrap"
           >
             <span>View Full Gallery</span>
             <ArrowRight className="w-4 h-4" />
@@ -48,7 +48,7 @@ export const GalleryPreview: React.FC<GalleryPreviewProps> = ({ onNavigate, onSe
               key={item.id}
               whileHover={{ y: -4 }}
               onClick={() => onSelectImage(item)}
-              className="group relative h-64 sm:h-72 rounded-2xl overflow-hidden shadow-md cursor-pointer border border-[#D4AF37]/40"
+              className="group relative h-64 sm:h-72 rounded-2xl overflow-hidden shadow-md cursor-pointer border border-purple-100"
             >
               <img
                 src={item.imageUrl}
@@ -64,16 +64,16 @@ export const GalleryPreview: React.FC<GalleryPreviewProps> = ({ onNavigate, onSe
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all" />
 
               <div className="absolute top-3 left-3">
-                <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-[#851424] text-amber-200 border border-[#D4AF37]/30 shadow">
+                <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-[#800080] text-white border border-purple-300 shadow">
                   {item.categoryLabel}
                 </span>
               </div>
 
               <div className="absolute bottom-4 left-4 right-4 text-white space-y-1">
-                <h3 className="font-cinzel text-base sm:text-lg font-bold text-[#FFF7E8] line-clamp-1">
+                <h3 className="font-cinzel text-base sm:text-lg font-bold text-white line-clamp-1">
                   {item.title}
                 </h3>
-                <p className="font-tamil text-amber-300 text-xs font-semibold">
+                <p className="font-tamil text-purple-200 text-xs font-semibold">
                   {item.tamilTitle}
                 </p>
                 <p className="text-[11px] text-slate-300 line-clamp-1 pt-1 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -82,7 +82,7 @@ export const GalleryPreview: React.FC<GalleryPreviewProps> = ({ onNavigate, onSe
               </div>
 
               <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <Eye className="w-4 h-4 text-amber-300" />
+                <Eye className="w-4 h-4 text-purple-300" />
               </div>
             </motion.div>
           ))}

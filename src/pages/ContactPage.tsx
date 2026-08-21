@@ -31,25 +31,24 @@ export const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#FAF9F6] text-slate-900 min-h-screen">
+    <div className="bg-white text-slate-900 min-h-screen">
       {/* Header Banner */}
-      <section className="relative py-16 sm:py-20 bg-[#600000] text-white border-b border-[#D4AF37]/30 overflow-hidden">
-        <div className="absolute inset-0 bg-dark-mandala opacity-25 pointer-events-none" />
+      <section className="relative py-16 sm:py-20 bg-[#800080] text-white border-b border-purple-900 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/10 border border-[#D4AF37]/50 text-amber-200 text-xs font-bold uppercase tracking-widest">
-            <Sparkles className="w-4 h-4 text-amber-300" />
+          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white text-[#800080] text-xs font-bold uppercase tracking-widest shadow-sm">
+            <Sparkles className="w-4 h-4 text-[#800080]" />
             <span>Connect & Admissions</span>
           </div>
 
-          <h1 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight">
-            Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF1B8] to-[#D4AF37]">Atomz Arts Academy</span>
+          <h1 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white">
+            Contact <span className="text-purple-200">Atomz Arts Academy</span>
           </h1>
 
-          <p className="font-tamil text-xl sm:text-2xl text-amber-200 font-bold max-w-2xl mx-auto">
+          <p className="font-tamil text-xl sm:text-2xl text-purple-200 font-bold max-w-2xl mx-auto">
             தொடர்பு கொள்க • புதுத்தெரு, திருவாரூர், தமிழ்நாடு
           </p>
 
-          <p className="text-slate-200 text-sm sm:text-base max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-purple-100 text-sm sm:text-base max-w-3xl mx-auto font-normal leading-relaxed">
             Reach out to our admissions counselors, visit our academy in Puthu Theru, or send an enquiry message for trial classes and fee details.
           </p>
         </div>
@@ -60,8 +59,8 @@ export const ContactPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column: Academy Contact Info & Helplines (5 cols) */}
           <div className="lg:col-span-5 space-y-8">
-            <div className="p-8 rounded-3xl bg-white border border-[#600000]/10 shadow-md space-y-6">
-              <h2 className="font-cinzel text-2xl font-bold text-[#600000]">
+            <div className="p-8 rounded-3xl bg-white border border-purple-100 shadow-md space-y-6">
+              <h2 className="font-cinzel text-2xl font-bold text-[#800080]">
                 Academy Helplines
               </h2>
 
@@ -74,14 +73,14 @@ export const ContactPage: React.FC = () => {
                   <a
                     key={phone}
                     href={`tel:${phone.replace(/\s+/g, '')}`}
-                    className="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 hover:bg-amber-50 border border-slate-200 hover:border-[#D4AF37] transition-all group"
+                    className="flex items-center justify-between p-3.5 rounded-xl bg-purple-50/50 hover:bg-purple-100 border border-purple-200 transition-all group"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-[#600000] text-amber-300 flex items-center justify-center">
+                      <div className="w-9 h-9 rounded-lg bg-[#800080] text-white flex items-center justify-center">
                         <Phone className="w-4 h-4" />
                       </div>
                       <div>
-                        <div className="font-mono font-bold text-slate-900 group-hover:text-[#600000] text-sm">
+                        <div className="font-mono font-bold text-slate-900 group-hover:text-[#800080] text-sm">
                           {phone}
                         </div>
                         <div className="text-[10px] text-slate-500">
@@ -89,7 +88,7 @@ export const ContactPage: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    <span className="text-xs font-bold text-[#600000] group-hover:translate-x-1 transition-transform">
+                    <span className="text-xs font-bold text-[#800080] group-hover:translate-x-1 transition-transform">
                       Call →
                     </span>
                   </a>
@@ -109,43 +108,43 @@ export const ContactPage: React.FC = () => {
             </div>
 
             {/* Address & Timings Card */}
-            <div className="p-8 rounded-3xl bg-[#002366] text-white shadow-md space-y-6">
-              <h3 className="font-cinzel text-xl font-bold text-[#D4AF37]">
+            <div className="p-8 rounded-3xl bg-[#680068] text-white shadow-md space-y-6">
+              <h3 className="font-cinzel text-xl font-bold text-white">
                 Location & Timings
               </h3>
 
               <div className="space-y-4 text-xs sm:text-sm">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-purple-200 flex-shrink-0 mt-0.5" />
                   <div>
                     <strong className="block text-white">Academy Campus:</strong>
-                    <span className="text-slate-200 leading-relaxed">
+                    <span className="text-purple-100 leading-relaxed font-normal">
                       {CONTACT_INFO.address}
                     </span>
-                    <span className="block font-tamil text-amber-200 mt-1">
+                    <span className="block font-tamil text-purple-200 mt-1">
                       புதுத்தெரு, திருவாரூர், தமிழ்நாடு - 610001
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                  <Clock className="w-5 h-5 text-purple-200 flex-shrink-0 mt-0.5" />
                   <div>
                     <strong className="block text-white">Operating Hours:</strong>
-                    <span className="text-slate-200">
+                    <span className="text-purple-100 font-normal">
                       {CONTACT_INFO.workingHours}
                     </span>
-                    <span className="block text-slate-300 text-xs">
+                    <span className="block text-purple-200 text-xs font-normal">
                       Morning & Evening flexible batches (Weekday & Weekend)
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                  <Mail className="w-5 h-5 text-purple-200 flex-shrink-0 mt-0.5" />
                   <div>
                     <strong className="block text-white">Email ID:</strong>
-                    <a href={`mailto:${CONTACT_INFO.email}`} className="text-slate-200 hover:text-amber-300 transition-colors">
+                    <a href={`mailto:${CONTACT_INFO.email}`} className="text-purple-100 hover:text-white transition-colors font-normal">
                       {CONTACT_INFO.email}
                     </a>
                   </div>
@@ -156,10 +155,10 @@ export const ContactPage: React.FC = () => {
 
           {/* Right Column: Admission Enquiry Form (7 cols) */}
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-xl space-y-6">
+            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-purple-100 shadow-xl space-y-6">
               <div className="space-y-2">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#600000]/10 text-[#600000] text-xs font-bold uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-100 text-[#800080] text-xs font-bold uppercase tracking-wider">
+                  <Sparkles className="w-3.5 h-3.5 text-[#800080]" />
                   <span>Admissions 2026</span>
                 </div>
                 <h2 className="font-cinzel text-2xl sm:text-3xl font-bold text-slate-900">
@@ -205,7 +204,7 @@ export const ContactPage: React.FC = () => {
                         value={formData.studentName}
                         onChange={e => setFormData({ ...formData, studentName: e.target.value })}
                         placeholder="e.g. Priyadharshini"
-                        className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-xs sm:text-sm focus:outline-none focus:border-[#600000] focus:ring-2 focus:ring-[#600000]/10"
+                        className="w-full px-4 py-2.5 rounded-xl bg-white border border-purple-200 text-xs sm:text-sm focus:outline-none focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/10 text-slate-900"
                       />
                     </div>
 
@@ -218,7 +217,7 @@ export const ContactPage: React.FC = () => {
                         value={formData.parentName}
                         onChange={e => setFormData({ ...formData, parentName: e.target.value })}
                         placeholder="e.g. Ramesh"
-                        className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-xs sm:text-sm focus:outline-none focus:border-[#600000] focus:ring-2 focus:ring-[#600000]/10"
+                        className="w-full px-4 py-2.5 rounded-xl bg-white border border-purple-200 text-xs sm:text-sm focus:outline-none focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/10 text-slate-900"
                       />
                     </div>
                   </div>
@@ -234,7 +233,7 @@ export const ContactPage: React.FC = () => {
                         value={formData.phone}
                         onChange={e => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="e.g. 98436 26558"
-                        className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-xs sm:text-sm focus:outline-none focus:border-[#600000] focus:ring-2 focus:ring-[#600000]/10"
+                        className="w-full px-4 py-2.5 rounded-xl bg-white border border-purple-200 text-xs sm:text-sm focus:outline-none focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/10 text-slate-900"
                       />
                     </div>
 
@@ -247,7 +246,7 @@ export const ContactPage: React.FC = () => {
                         value={formData.email}
                         onChange={e => setFormData({ ...formData, email: e.target.value })}
                         placeholder="name@example.com"
-                        className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-xs sm:text-sm focus:outline-none focus:border-[#600000] focus:ring-2 focus:ring-[#600000]/10"
+                        className="w-full px-4 py-2.5 rounded-xl bg-white border border-purple-200 text-xs sm:text-sm focus:outline-none focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/10 text-slate-900"
                       />
                     </div>
                   </div>
@@ -259,7 +258,7 @@ export const ContactPage: React.FC = () => {
                     <select
                       value={formData.courseInterest}
                       onChange={e => setFormData({ ...formData, courseInterest: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-xs sm:text-sm focus:outline-none focus:border-[#600000] focus:ring-2 focus:ring-[#600000]/10"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-purple-200 text-xs sm:text-sm focus:outline-none focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/10 text-slate-900"
                     >
                       {ALL_COURSES.map(c => (
                         <option key={c.id} value={`${c.name} (${c.tamilName})`}>
@@ -277,7 +276,7 @@ export const ContactPage: React.FC = () => {
                       <select
                         value={formData.ageGroup}
                         onChange={e => setFormData({ ...formData, ageGroup: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-xs sm:text-sm focus:outline-none focus:border-[#600000] focus:ring-2 focus:ring-[#600000]/10"
+                        className="w-full px-4 py-2.5 rounded-xl bg-white border border-purple-200 text-xs sm:text-sm focus:outline-none focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/10 text-slate-900"
                       >
                         <option>Kids (Age 4-10)</option>
                         <option>Teens & Students (Age 11-18)</option>
@@ -293,7 +292,7 @@ export const ContactPage: React.FC = () => {
                       <select
                         value={formData.preferredTiming}
                         onChange={e => setFormData({ ...formData, preferredTiming: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-xs sm:text-sm focus:outline-none focus:border-[#600000] focus:ring-2 focus:ring-[#600000]/10"
+                        className="w-full px-4 py-2.5 rounded-xl bg-white border border-purple-200 text-xs sm:text-sm focus:outline-none focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/10 text-slate-900"
                       >
                         <option>Morning (6:30 AM - 9:00 AM)</option>
                         <option>Evening (4:30 PM - 7:30 PM)</option>
@@ -311,14 +310,14 @@ export const ContactPage: React.FC = () => {
                       value={formData.message}
                       onChange={e => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Any prior experience, specific timing needs, or questions..."
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-xs sm:text-sm focus:outline-none focus:border-[#600000] focus:ring-2 focus:ring-[#600000]/10"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-purple-200 text-xs sm:text-sm focus:outline-none focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/10 text-slate-900"
                     />
                   </div>
 
                   <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
                     <button
                       type="submit"
-                      className="w-full sm:flex-1 py-3.5 rounded-xl bg-[#600000] hover:bg-[#800000] text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full sm:flex-1 py-3.5 rounded-xl bg-[#800080] hover:bg-[#680068] text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
                     >
                       <Send className="w-4 h-4" />
                       <span>Submit Admission Enquiry</span>
