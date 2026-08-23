@@ -15,9 +15,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   return (
     <section className="relative min-h-[88vh] flex items-center bg-gradient-to-b from-[#FFF1F7] via-[#FFFFFF] to-[#FFF1F7] text-[#0F2942] overflow-hidden pt-8 pb-16 lg:py-20 border-b border-pink-100">
-      {/* Background Soft Pink Mandala Motifs */}
-      <div className="absolute inset-0 bg-mandala-pattern opacity-40 pointer-events-none" />
-
       {/* Atmospheric Glowing Light Orbs */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#e71e92]/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#831154]/10 rounded-full blur-[130px] pointer-events-none" />
