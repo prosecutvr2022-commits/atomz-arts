@@ -16,28 +16,28 @@ export const ContactCtaBanner: React.FC<ContactCtaBannerProps> = ({ onOpenEnquir
   };
 
   return (
-    <section className="relative py-20 bg-[#800080] text-white overflow-hidden">
+    <section className="relative py-20 bg-[#831154] text-white overflow-hidden">
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 z-10">
-        <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white text-[#800080] text-xs font-bold uppercase tracking-wider shadow-sm">
-          <Sparkles className="w-4 h-4 text-[#800080]" />
+        <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white text-[#831154] text-xs font-extrabold uppercase tracking-wider shadow-sm">
+          <Sparkles className="w-4 h-4 text-[#e71e92]" />
           <span>Admissions Open For 2026 Batches</span>
         </div>
 
-        <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+        <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
           Begin Your Artistic Journey With Us
         </h2>
 
-        <p className="font-playfair italic text-xl text-purple-200">
+        <p className="font-sans font-medium text-lg sm:text-xl text-[#ff60b6]">
           Discover your talent, develop your skills and experience the joy of learning at Atomz Arts Academy.
         </p>
 
-        <p className="text-purple-100 text-sm sm:text-base max-w-2xl mx-auto font-normal leading-relaxed">
+        <p className="text-pink-100 text-sm sm:text-base max-w-2xl mx-auto font-normal leading-relaxed">
           Join our supportive community of passionate learners in Thiruvarur. All age groups from children to working adults are warmly welcome.
         </p>
 
         {/* 3 Helplines Display */}
         <div className="pt-2">
-          <p className="text-xs text-purple-200 font-bold uppercase tracking-wider mb-2">
+          <p className="text-xs text-pink-200 font-bold uppercase tracking-wider mb-2">
             Call Any of Our Direct Academy Helplines:
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
@@ -45,9 +45,9 @@ export const ContactCtaBanner: React.FC<ContactCtaBannerProps> = ({ onOpenEnquir
               <a
                 key={phone}
                 href={`tel:${phone.replace(/\s+/g, '')}`}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-purple-300/40 text-white font-mono text-sm font-bold transition-all"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-pink-300/40 text-white font-mono text-sm font-bold transition-all"
               >
-                <Phone className="w-3.5 h-3.5 text-purple-200" />
+                <Phone className="w-3.5 h-3.5 text-pink-300" />
                 <span>{phone}</span>
               </a>
             ))}
@@ -58,9 +58,9 @@ export const ContactCtaBanner: React.FC<ContactCtaBannerProps> = ({ onOpenEnquir
         <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
           <button
             onClick={onOpenEnquiry}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white hover:bg-purple-50 text-[#800080] font-extrabold text-sm sm:text-base shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white hover:bg-pink-50 text-[#831154] font-extrabold text-sm sm:text-base shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer"
           >
-            <GraduationCap className="w-5 h-5" />
+            <GraduationCap className="w-5 h-5 text-[#e71e92]" />
             <span>Join Our Classes</span>
           </button>
 

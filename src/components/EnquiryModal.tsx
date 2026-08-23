@@ -95,10 +95,10 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.25 }}
-          className="relative w-full max-w-2xl bg-white border border-purple-200 rounded-2xl shadow-2xl overflow-hidden my-8"
+          className="relative w-full max-w-2xl bg-white border border-sky-200 rounded-2xl shadow-2xl overflow-hidden my-8"
         >
           {/* Header Banner */}
-          <div className="relative bg-[#800080] p-6 text-white border-b border-purple-900">
+          <div className="relative bg-[#831154] p-6 text-white border-b border-pink-900">
             <div className="absolute top-0 right-0 p-4">
               <button
                 onClick={onClose}
@@ -114,15 +114,15 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                 <Logo size="md" variant="crest" lightMode={false} />
               </div>
               <div className="min-w-0 pr-8">
-                <div className="flex items-center gap-2 text-purple-200 text-xs font-semibold tracking-wider uppercase mb-1">
-                  <Sparkles className="w-4 h-4 text-amber-300" />
+                <div className="flex items-center gap-2 text-pink-200 text-xs font-semibold tracking-wider uppercase mb-1">
+                  <Sparkles className="w-4 h-4 text-[#ff60b6]" />
                   <span>Admissions Open 2026</span>
                 </div>
 
-                <h2 className="font-cinzel text-2xl sm:text-3xl font-bold text-white">
+                <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-white">
                   {selectedCourse ? `Enquire for ${selectedCourse.name}` : 'Course Admission & Enquiry'}
                 </h2>
-                <p className="font-playfair italic text-purple-200 text-sm mt-1">
+                <p className="font-sans text-pink-200 text-sm mt-1 font-medium">
                   {selectedCourse ? selectedCourse.tamilName : 'ஆட்டம்ஸ் ஆர்ட்ஸ் அகாடமி - சேர்க்கை விபரம்'}
                 </p>
               </div>
@@ -137,21 +137,21 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ type: 'spring', damping: 12 }}
-                  className="w-20 h-20 mx-auto rounded-full bg-purple-50 flex items-center justify-center text-[#800080] border-2 border-[#800080] shadow-lg"
+                  className="w-20 h-20 mx-auto rounded-full bg-pink-50 flex items-center justify-center text-[#e71e92] border-2 border-[#e71e92] shadow-lg"
                 >
                   <CheckCircle2 className="w-12 h-12" />
                 </motion.div>
 
-                <h3 className="font-cinzel text-2xl font-bold text-[#800080]">
+                <h3 className="font-sans text-2xl font-bold text-[#831154]">
                   Enquiry Received Successfully!
                 </h3>
                 <p className="text-slate-700 max-w-md mx-auto text-sm leading-relaxed">
                   Thank you, <strong className="text-slate-900">{formData.studentName}</strong>. Our academy team in Thiruvarur will contact you at <strong className="text-slate-900">{formData.phone}</strong> shortly with complete batch timings and syllabus details.
                 </p>
 
-                <div className="p-4 bg-[#FAF5FC] border border-purple-200 rounded-xl max-w-md mx-auto text-left text-xs text-slate-800 space-y-1.5">
-                  <div className="font-bold flex items-center gap-1.5 text-[#800080]">
-                    <MapPin className="w-3.5 h-3.5 text-[#800080]" />
+                <div className="p-4 bg-[#FFF1F7] border border-pink-200 rounded-xl max-w-md mx-auto text-left text-xs text-slate-800 space-y-1.5">
+                  <div className="font-bold flex items-center gap-1.5 text-[#831154]">
+                    <MapPin className="w-3.5 h-3.5 text-[#e71e92]" />
                     Academy Campus Address:
                   </div>
                   <p>{CONTACT_INFO.address}</p>
@@ -171,7 +171,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                       setIsSubmitted(false);
                       onClose();
                     }}
-                    className="px-6 py-2.5 rounded-full border border-purple-300 hover:bg-purple-50 text-[#800080] text-sm font-bold transition-all cursor-pointer"
+                    className="px-6 py-2.5 rounded-full border border-pink-300 hover:bg-pink-50 text-[#831154] text-sm font-bold transition-all cursor-pointer"
                   >
                     Close Window
                   </button>
@@ -188,7 +188,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                     name="courseId"
                     value={formData.courseId}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/20 bg-white text-slate-900 text-sm font-medium transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-pink-200 focus:border-[#e71e92] focus:ring-2 focus:ring-[#e71e92]/20 bg-white text-slate-900 text-sm font-medium transition-all"
                     required
                   >
                     {ALL_COURSES.map(course => (
@@ -212,7 +212,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                       value={formData.studentName}
                       onChange={handleChange}
                       placeholder="e.g., K. Abhinaya"
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/20 bg-white text-slate-900 text-sm transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-pink-200 focus:border-[#e71e92] focus:ring-2 focus:ring-[#e71e92]/20 bg-white text-slate-900 text-sm transition-all"
                     />
                   </div>
 
@@ -226,7 +226,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                       value={formData.age}
                       onChange={handleChange}
                       placeholder="e.g., 9 Years / Class 5"
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/20 bg-white text-slate-900 text-sm transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-pink-200 focus:border-[#e71e92] focus:ring-2 focus:ring-[#e71e92]/20 bg-white text-slate-900 text-sm transition-all"
                     />
                   </div>
                 </div>
@@ -237,7 +237,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                       Phone Number (Call) *
                     </label>
                     <div className="relative">
-                      <Phone className="w-4 h-4 text-purple-400 absolute left-3.5 top-3" />
+                      <Phone className="w-4 h-4 text-pink-500 absolute left-3.5 top-3" />
                       <input
                         type="tel"
                         name="phone"
@@ -245,7 +245,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="e.g., 9843626558"
-                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-purple-200 focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/20 bg-white text-slate-900 text-sm transition-all"
+                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-pink-200 focus:border-[#e71e92] focus:ring-2 focus:ring-[#e71e92]/20 bg-white text-slate-900 text-sm transition-all"
                       />
                     </div>
                   </div>
@@ -260,7 +260,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                       value={formData.parentName}
                       onChange={handleChange}
                       placeholder="e.g., S. Ramesh"
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/20 bg-white text-slate-900 text-sm transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-pink-200 focus:border-[#e71e92] focus:ring-2 focus:ring-[#e71e92]/20 bg-white text-slate-900 text-sm transition-all"
                     />
                   </div>
                 </div>
@@ -269,14 +269,14 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5 text-[#800080]" />
+                      <Clock className="w-3.5 h-3.5 text-[#e71e92]" />
                       Preferred Batch
                     </label>
                     <select
                       name="batchPreference"
                       value={formData.batchPreference}
                       onChange={handleChange}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/20 bg-white text-slate-900 text-sm"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-pink-200 focus:border-[#e71e92] focus:ring-2 focus:ring-[#e71e92]/20 bg-white text-slate-900 text-sm"
                     >
                       <option value="Morning (6:30 AM - 8:30 AM)">Morning (6:30 AM - 8:30 AM)</option>
                       <option value="Evening (4:30 PM - 6:30 PM)">Evening (4:30 PM - 6:30 PM)</option>
@@ -287,14 +287,14 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
 
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1">
-                      <Calendar className="w-3.5 h-3.5 text-[#800080]" />
+                      <Calendar className="w-3.5 h-3.5 text-[#e71e92]" />
                       Training Mode
                     </label>
                     <select
                       name="learningMode"
                       value={formData.learningMode}
                       onChange={handleChange}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/20 bg-white text-slate-900 text-sm"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-pink-200 focus:border-[#e71e92] focus:ring-2 focus:ring-[#e71e92]/20 bg-white text-slate-900 text-sm"
                     >
                       <option value="Offline (Thiruvarur Academy Campus)">Campus Classroom (Thiruvarur)</option>
                       <option value="Online Virtual Classroom">Online Live Interactive</option>
@@ -313,13 +313,13 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us if you have previous knowledge or specific questions..."
-                    className="w-full px-3.5 py-2 rounded-xl border border-purple-200 focus:border-[#800080] focus:ring-2 focus:ring-[#800080]/20 bg-white text-slate-900 text-sm transition-all"
+                    className="w-full px-3.5 py-2 rounded-xl border border-pink-200 focus:border-[#e71e92] focus:ring-2 focus:ring-[#e71e92]/20 bg-white text-slate-900 text-sm transition-all"
                   ></textarea>
                 </div>
 
                 {/* Instant Helpline Info */}
-                <div className="flex flex-wrap items-center justify-between p-3 bg-[#FAF5FC] border border-purple-200 rounded-xl text-xs text-slate-800">
-                  <span>Direct Hotline: <strong className="text-[#800080]">{CONTACT_INFO.phoneNumbers.slice(0, 2).join(' / ')}</strong></span>
+                <div className="flex flex-wrap items-center justify-between p-3 bg-[#FFF1F7] border border-pink-200 rounded-xl text-xs text-slate-800">
+                  <span>Direct Hotline: <strong className="text-[#831154]">{CONTACT_INFO.phoneNumbers.slice(0, 2).join(' / ')}</strong></span>
                   <span className="text-slate-600">Puthu Theru, Thiruvarur</span>
                 </div>
 
@@ -328,10 +328,10 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#800080] hover:bg-[#680068] text-white font-bold text-sm shadow-md active:scale-[0.99] transition-all cursor-pointer disabled:opacity-75"
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#e71e92] hover:bg-[#d11481] text-white font-bold text-sm shadow-md active:scale-[0.99] transition-all cursor-pointer disabled:opacity-75"
                   >
                     {isSubmitting ? (
-                      <span>Submitting...</span>
+                       <span>Submitting...</span>
                     ) : (
                       <>
                         <Send className="w-4 h-4" />

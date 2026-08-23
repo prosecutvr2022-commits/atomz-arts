@@ -13,7 +13,7 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({
   onOpenEnquiry
 }) => {
   return (
-    <section className="relative py-20 bg-white text-slate-800 border-b border-purple-100 overflow-hidden">
+    <section className="relative py-20 bg-white text-slate-800 border-b border-pink-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Visual Collage with Cultural & Modern Learning (5 cols) */}
@@ -26,7 +26,7 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({
               className="relative mx-auto max-w-md lg:max-w-none"
             >
               {/* Primary Image: Dance & Music Harmony */}
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-purple-50">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-pink-50">
                 <img
                   src="/welcome-arts.png"
                   alt="Traditional Arts and Modern Learning at Atomz Academy"
@@ -38,12 +38,12 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({
                   }}
                   className="w-full h-80 sm:h-96 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#800080]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#831154]/80 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-purple-200">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-pink-200">
                     Kaveri Delta Legacy
                   </span>
-                  <h4 className="font-cinzel text-lg font-bold">Thiruvarur Classical Heritage</h4>
+                  <h4 className="font-sans text-lg font-bold">Thiruvarur Classical Heritage</h4>
                 </div>
               </div>
 
@@ -53,11 +53,11 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="absolute -bottom-5 right-2 sm:-bottom-6 sm:-right-6 w-44 sm:w-56 p-3 sm:p-4 rounded-2xl bg-white border border-purple-200 shadow-xl"
+                className="absolute -bottom-5 right-2 sm:-bottom-6 sm:-right-6 w-44 sm:w-56 p-3 sm:p-4 rounded-2xl bg-white border border-pink-200 shadow-xl"
               >
-                <div className="flex items-center gap-2 text-[#800080]">
-                  <Award className="w-5 h-5 text-[#800080]" />
-                  <span className="font-cinzel text-xs font-bold uppercase">All Under One Roof</span>
+                <div className="flex items-center gap-2 text-[#e71e92]">
+                  <Award className="w-5 h-5 text-[#e71e92]" />
+                  <span className="font-sans text-xs font-bold uppercase">All Under One Roof</span>
                 </div>
                 <p className="text-xs text-slate-600 mt-1 font-medium">
                   21+ Arts, Music, Academics & Vocational Crafts in Thiruvarur.
@@ -75,16 +75,16 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({
               transition={{ duration: 0.6 }}
               className="space-y-2"
             >
-              <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#800080]">
-                <Sparkles className="w-4 h-4 text-[#800080]" />
+              <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#e71e92]">
+                <Sparkles className="w-4 h-4 text-[#e71e92]" />
                 <span>Nurturing The Soul of Arts</span>
               </div>
 
-              <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                Welcome to <span className="text-[#800080]">Atomz Arts Academy</span>
+              <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#831154] tracking-tight leading-tight">
+                Welcome to <span className="text-[#e71e92]">Atomz Arts Academy</span>
               </h2>
 
-              <p className="font-tamil text-base sm:text-lg text-[#800080] font-semibold">
+              <p className="font-tamil text-base sm:text-lg text-[#e71e92] font-semibold">
                 கலை, பண்பாடு, கல்வி மற்றும் படைப்பாற்றலை வளர்க்கும் கலைக்கூடம்
               </p>
             </motion.div>
@@ -124,7 +124,7 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({
                 'Empowering Women with Self-Employment Craft Skills'
               ].map((point, index) => (
                 <div key={index} className="flex items-start gap-2 text-xs sm:text-sm text-slate-800 font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[#800080] flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#e71e92] flex-shrink-0 mt-0.5" />
                   <span>{point}</span>
                 </div>
               ))}
@@ -140,14 +140,14 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({
             >
               <button
                 onClick={() => onNavigate('about')}
-                className="px-6 py-3 rounded-full bg-[#800080] hover:bg-[#680068] text-white font-bold text-sm shadow-md transition-all cursor-pointer"
+                className="px-6 py-3 rounded-full bg-[#e71e92] hover:bg-[#d11481] text-white font-bold text-sm shadow-md transition-all cursor-pointer"
               >
                 Learn More About Our Heritage
               </button>
 
               <button
                 onClick={onOpenEnquiry}
-                className="px-6 py-3 rounded-full border-2 border-[#800080] text-[#800080] hover:bg-purple-50 font-bold text-sm transition-all cursor-pointer"
+                className="px-6 py-3 rounded-full border-2 border-[#831154] text-[#831154] hover:bg-pink-50 font-bold text-sm transition-all cursor-pointer"
               >
                 Book a Free Trial Session
               </button>

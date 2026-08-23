@@ -14,27 +14,27 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCourse, onOp
   const topCourses = ALL_COURSES.slice(0, 8);
 
   return (
-    <footer className="relative bg-[#540054] text-purple-100 border-t-2 border-[#800080] overflow-hidden">
-      {/* Decorative Purple Accent Bar */}
-      <div className="h-1.5 w-full bg-gradient-to-r from-[#800080] via-[#A81CA8] to-[#800080]" />
+    <footer className="relative bg-[#2b071c] text-pink-100 border-t-2 border-[#e71e92] overflow-hidden">
+      {/* Decorative Accent Bar */}
+      <div className="h-1.5 w-full bg-gradient-to-r from-[#e71e92] via-[#ff60b6] to-[#e71e92]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Col 1: Brand & Purpose */}
           <div className="space-y-4">
             <Logo size="lg" lightMode={false} />
-            <p className="text-xs sm:text-sm text-purple-100/90 leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-pink-100/90 leading-relaxed font-normal">
               <strong className="text-white font-bold">Atomz Arts Academy (Heart of Arts)</strong> is a premier multidisciplinary cultural and educational academy in Thiruvarur, Tamil Nadu. Dedicated to preserving ancient South Indian traditions while cultivating contemporary creative and academic excellence.
             </p>
-            <div className="pt-2 font-tamil text-amber-200 text-xs leading-relaxed border-l-2 border-amber-300 pl-3 font-semibold">
+            <div className="pt-2 font-tamil text-[#ff60b6] text-xs leading-relaxed border-l-2 border-[#e71e92] pl-3 font-semibold">
               கலை, கலாச்சாரம், இசை, நடனம், கல்வி மற்றும் கைவினை பயிற்சிகளின் சங்கமம்.
             </div>
           </div>
 
           {/* Col 2: Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-cinzel text-base font-bold text-white uppercase tracking-wider flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-white"></span>
+            <h3 className="font-sans text-base font-bold text-white uppercase tracking-wider flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#e71e92]"></span>
               Quick Navigation
             </h3>
             <ul className="space-y-2.5 text-sm">
@@ -51,9 +51,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCourse, onOp
                       onNavigate(item.id);
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
-                    className="group flex items-center gap-2 text-purple-200 hover:text-white transition-colors text-left cursor-pointer"
+                    className="group flex items-center gap-2 text-pink-200 hover:text-white transition-colors text-left cursor-pointer"
                   >
-                    <ChevronRight className="w-3.5 h-3.5 text-amber-300 group-hover:translate-x-1 transition-transform" />
+                    <ChevronRight className="w-3.5 h-3.5 text-[#e71e92] group-hover:translate-x-1 transition-transform" />
                     <span>{item.label}</span>
                   </button>
                 </li>
@@ -63,8 +63,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCourse, onOp
 
           {/* Col 3: Popular Courses */}
           <div className="space-y-4">
-            <h3 className="font-cinzel text-base font-bold text-white uppercase tracking-wider flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-amber-300"></span>
+            <h3 className="font-sans text-base font-bold text-white uppercase tracking-wider flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#e71e92]"></span>
               Featured Disciplines
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm">
@@ -76,11 +76,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCourse, onOp
                       onNavigate('classes');
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
-                    className="hover:text-white transition-colors text-left flex items-baseline gap-1.5 cursor-pointer text-purple-200"
+                    className="hover:text-white transition-colors text-left flex items-baseline gap-1.5 cursor-pointer text-pink-200"
                   >
-                    <span className="text-amber-300">•</span>
+                    <span className="text-[#e71e92]">•</span>
                     <span className="font-medium text-white">{course.name}</span>
-                    <span className="font-tamil text-[11px] text-amber-200">({course.tamilName})</span>
+                    <span className="font-tamil text-[11px] text-[#ff60b6]">({course.tamilName})</span>
                   </button>
                 </li>
               ))}
@@ -89,26 +89,26 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCourse, onOp
 
           {/* Col 4: Official Contact & Location */}
           <div className="space-y-4">
-            <h3 className="font-cinzel text-base font-bold text-white uppercase tracking-wider flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-white"></span>
+            <h3 className="font-sans text-base font-bold text-white uppercase tracking-wider flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#e71e92]"></span>
               Academy Contact
             </h3>
 
             <div className="space-y-3 text-xs sm:text-sm">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-amber-300 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#e71e92] flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-white">Atomz Arts Academy</p>
-                  <p className="text-purple-200">Puthu Theru, Thiruvarur, Tamil Nadu</p>
-                  <p className="font-tamil text-[11px] text-amber-200">புதுத்தெரு, திருவாரூர்.</p>
+                  <p className="text-pink-200">Puthu Theru, Thiruvarur, Tamil Nadu</p>
+                  <p className="font-tamil text-[11px] text-[#ff60b6]">புதுத்தெரு, திருவாரூர்.</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-amber-300 flex-shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-[#e71e92] flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-white">Call for Admissions:</p>
-                  <div className="flex flex-col space-y-1 font-mono text-amber-200 font-bold mt-1 text-xs">
+                  <div className="flex flex-col space-y-1 font-mono text-pink-200 font-bold mt-1 text-xs">
                     {CONTACT_INFO.phoneNumbers.map(phone => (
                       <a key={phone} href={`tel:${phone.replace(/\s+/g, '')}`} className="hover:underline hover:text-white">
                         {phone}
@@ -119,26 +119,26 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCourse, onOp
               </div>
 
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-amber-300 flex-shrink-0" />
-                <a href={`mailto:${CONTACT_INFO.email}`} className="text-purple-200 hover:text-white transition-colors">
+                <Mail className="w-4 h-4 text-[#e71e92] flex-shrink-0" />
+                <a href={`mailto:${CONTACT_INFO.email}`} className="text-pink-200 hover:text-white transition-colors">
                   {CONTACT_INFO.email}
                 </a>
               </div>
 
               <div className="flex items-center gap-2.5">
-                <Clock className="w-4 h-4 text-amber-300 flex-shrink-0" />
-                <p className="text-purple-200">{CONTACT_INFO.workingHours}</p>
+                <Clock className="w-4 h-4 text-[#e71e92] flex-shrink-0" />
+                <p className="text-pink-200">{CONTACT_INFO.workingHours}</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Banner & Copyright */}
-        <div className="mt-12 pt-8 border-t border-purple-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-purple-300">
+        <div className="mt-12 pt-8 border-t border-pink-900/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-pink-300">
           <p>
             © 2026 <strong className="text-white">Atomz Arts Academy</strong>. All Rights Reserved. Nurturing Talent & Culture.
           </p>
-          <div className="flex items-center gap-4 text-amber-200/90 font-medium">
+          <div className="flex items-center gap-4 text-pink-200/90 font-medium">
             <span>Puthu Theru, Thiruvarur</span>
             <span>•</span>
             <span>Heart of Arts</span>

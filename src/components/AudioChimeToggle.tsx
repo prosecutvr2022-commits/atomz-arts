@@ -72,8 +72,8 @@ export const AudioChimeToggle: React.FC = () => {
       onClick={toggleSound}
       className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-all cursor-pointer ${
         isPlaying
-          ? 'bg-[#800080] text-white border-purple-300 shadow-md animate-pulse'
-          : 'bg-white/10 text-white border-purple-300/40 hover:bg-white/20 hover:text-white'
+          ? 'bg-[#e71e92] text-white border-pink-300 shadow-md animate-pulse'
+          : 'bg-white/10 text-white border-pink-300/40 hover:bg-white/20 hover:text-white'
       }`}
       title={isPlaying ? 'Mute Classical Ambient Isai' : 'Play Classical Ambient Tanpura Isai'}
       aria-label="Toggle classical ambient audio"

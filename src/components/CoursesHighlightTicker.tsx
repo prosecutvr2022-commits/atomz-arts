@@ -47,21 +47,21 @@ export const CoursesHighlightTicker: React.FC<CoursesHighlightTickerProps> = ({ 
   ];
 
   return (
-    <div className="relative bg-[#FAF5FC] py-10 border-b border-purple-100 overflow-hidden">
+    <div className="relative bg-[#FFF1F7] py-10 border-b border-pink-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
           <div>
-            <span className="font-cinzel text-xs font-bold uppercase tracking-widest text-[#800080]">
+            <span className="font-sans text-xs font-extrabold uppercase tracking-widest text-[#e71e92]">
               Multi-Disciplinary Disciplines
             </span>
-            <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-slate-900 mt-0.5">
+            <h3 className="font-sans text-xl sm:text-2xl font-bold text-[#831154] mt-0.5">
               Explore Our Core Academy Pillars
             </h3>
           </div>
 
           <button
             onClick={() => onNavigate('classes')}
-            className="text-xs sm:text-sm font-bold text-[#800080] hover:text-[#580058] underline underline-offset-4 transition-colors cursor-pointer"
+            className="text-xs sm:text-sm font-bold text-[#e71e92] hover:text-[#831154] underline underline-offset-4 transition-colors cursor-pointer"
           >
             View Complete 21+ Course Syllabus →
           </button>
@@ -76,20 +76,20 @@ export const CoursesHighlightTicker: React.FC<CoursesHighlightTickerProps> = ({ 
                 key={idx}
                 whileHover={{ y: -4 }}
                 onClick={() => onNavigate('classes')}
-                className="group p-4 rounded-2xl bg-white hover:bg-[#FAF5FC] border border-purple-100 hover:border-[#800080] shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
+                className="group p-4 rounded-2xl bg-white hover:bg-[#FFF1F7] border border-pink-100 hover:border-[#e71e92] shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
               >
                 <div className="space-y-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#800080] p-0.5 shadow-xs">
-                    <div className="w-full h-full rounded-[10px] bg-[#800080] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-[#e71e92] p-0.5 shadow-xs">
+                    <div className="w-full h-full rounded-[10px] bg-[#e71e92] flex items-center justify-center">
                       <Icon className="w-5 h-5 text-white" />
                     </div>
                   </div>
 
                   <div>
-                    <h4 className="font-cinzel text-sm font-bold text-slate-900 group-hover:text-[#800080] transition-colors">
+                    <h4 className="font-sans text-sm font-bold text-[#831154] group-hover:text-[#e71e92] transition-colors">
                       {cat.title}
                     </h4>
-                    <p className="font-tamil text-[11px] text-[#800080] font-semibold">
+                    <p className="font-tamil text-[11px] text-[#e71e92] font-semibold">
                       {cat.tamil}
                     </p>
                   </div>

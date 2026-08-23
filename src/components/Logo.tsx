@@ -264,18 +264,18 @@ export const Logo: React.FC<LogoProps> = ({
 
         {/* ATOMZ with 3D Globe */}
         <div className="mt-3 flex items-center justify-center font-black tracking-wider leading-none">
-          <span className={`font-cinzel font-black tracking-wider ${currentScale.title} ${lightMode ? 'text-[#800080]' : 'text-white'}`}>
+          <span className={`font-sans font-black tracking-wider ${currentScale.title} ${lightMode ? 'text-[#831154]' : 'text-white'}`}>
             AT
           </span>
           <GlobeO className={size === '2xl' ? 'w-8 h-8 sm:w-10 sm:h-10 mx-1' : size === 'xl' ? 'w-6 h-6 sm:w-8 sm:h-8 mx-1' : 'w-5 h-5 sm:w-6 sm:h-6 mx-0.5'} />
-          <span className={`font-cinzel font-black tracking-wider ${currentScale.title} ${lightMode ? 'text-[#800080]' : 'text-white'}`}>
+          <span className={`font-sans font-black tracking-wider ${currentScale.title} ${lightMode ? 'text-[#831154]' : 'text-white'}`}>
             MZ
           </span>
         </div>
 
         {/* Red Bar: Arts Academy */}
         <div className="mt-1.5 inline-block">
-          <div className={`bg-[#E51E25] text-white font-black tracking-widest uppercase rounded shadow-md border border-[#B3151B] ${currentScale.badge}`}>
+          <div className={`bg-[#e71e92] text-white font-black tracking-widest uppercase rounded shadow-md border border-[#c2185b] ${currentScale.badge}`}>
             Arts Academy
           </div>
         </div>
@@ -283,7 +283,7 @@ export const Logo: React.FC<LogoProps> = ({
         {/* Script Slogan: Heart of Arts..... */}
         {showTagline && (
           <div className="mt-1 flex items-center gap-1.5 justify-center">
-            <span className={`font-serif italic font-bold tracking-wide ${currentScale.tagline} ${lightMode ? 'text-[#800080]' : 'text-purple-200'}`}>
+            <span className={`font-serif italic font-bold tracking-wide ${currentScale.tagline} ${lightMode ? 'text-[#e71e92]' : 'text-pink-200'}`}>
               Heart of Arts . . . . .
             </span>
           </div>
@@ -305,9 +305,9 @@ export const Logo: React.FC<LogoProps> = ({
         {/* Top: ATOMZ with Globe */}
         <div className="flex items-center leading-none">
           <span
-            className={`font-cinzel font-black tracking-tight ${currentScale.title} ${
+            className={`font-sans font-black tracking-tight ${currentScale.title} ${
               lightMode
-                ? 'text-[#800080]'
+                ? 'text-[#831154]'
                 : 'text-white'
             }`}
           >
@@ -325,19 +325,19 @@ export const Logo: React.FC<LogoProps> = ({
             }
           />
           <span
-            className={`font-cinzel font-black tracking-tight ${currentScale.title} ${
+            className={`font-sans font-black tracking-tight ${currentScale.title} ${
               lightMode
-                ? 'text-[#800080]'
+                ? 'text-[#831154]'
                 : 'text-white'
             }`}
           >
             MZ
           </span>
 
-          {/* Red Arts Academy Pill */}
+          {/* Arts Academy Pill */}
           <div className="ml-1.5 sm:ml-2">
             <span
-              className={`bg-[#E51E25] text-white font-extrabold tracking-wider uppercase rounded shadow-sm border border-[#B3151B] whitespace-nowrap ${currentScale.badge}`}
+              className={`bg-[#e71e92] text-white font-extrabold tracking-wider uppercase rounded shadow-sm border border-[#c2185b] whitespace-nowrap ${currentScale.badge}`}
             >
               Arts Academy
             </span>
@@ -349,15 +349,15 @@ export const Logo: React.FC<LogoProps> = ({
           <div className="flex items-center gap-1.5 mt-1 sm:mt-1.5 flex-wrap leading-tight">
             <span
               className={`font-serif italic font-bold tracking-wide ${currentScale.tagline} ${
-                lightMode ? 'text-[#800080]' : 'text-purple-200'
+                lightMode ? 'text-[#e71e92]' : 'text-pink-200'
               }`}
             >
               Heart of Arts . . . . .
             </span>
-            <span className="hidden sm:inline text-[9px] text-[#800080]/60">•</span>
+            <span className="hidden sm:inline text-[9px] text-pink-400">•</span>
             <span
               className={`hidden sm:inline font-tamil text-[10px] sm:text-[11px] font-semibold tracking-normal ${
-                lightMode ? 'text-slate-600' : 'text-purple-100'
+                lightMode ? 'text-slate-600' : 'text-pink-100'
               }`}
             >
               ஆட்டம்ஸ் ஆர்ட்ஸ் அகாடமி

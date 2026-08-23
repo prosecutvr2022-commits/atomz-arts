@@ -43,7 +43,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FFFFFF] text-[#181124] font-outfit antialiased overflow-x-hidden w-full max-w-full selection:bg-[#800080] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#FFFFFF] text-slate-800 font-sans antialiased overflow-x-hidden w-full max-w-full selection:bg-[#e71e92] selection:text-white">
       {/* Global Navigation Bar */}
       <Navbar
         currentPage={currentPage}
@@ -96,7 +96,7 @@ export default function App() {
       />
 
       {/* Floating Quick Action Contacts (Phone helplines & WhatsApp) */}
-      <QuickContactFab onOpenEnquiry={() => handleOpenEnquiry()} />
+      <QuickContactFab />
 
       {/* Admission / Trial Enquiry Modal */}
       <EnquiryModal
@@ -105,7 +105,7 @@ export default function App() {
           setIsEnquiryModalOpen(false);
           setSelectedCourseForEnquiry(null);
         }}
-        preselectedCourse={selectedCourseForEnquiry}
+        selectedCourse={selectedCourseForEnquiry}
       />
 
       {/* Full Course Syllabus & Details Modal */}

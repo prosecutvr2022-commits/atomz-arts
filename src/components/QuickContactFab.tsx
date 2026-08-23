@@ -22,12 +22,12 @@ export const QuickContactFab: React.FC = () => {
             initial={{ opacity: 0, y: 15, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 15, scale: 0.9 }}
-            className="w-[calc(100vw-24px)] max-w-xs sm:w-80 bg-white border border-purple-200 rounded-2xl shadow-2xl p-3.5 sm:p-4 text-slate-900 space-y-3"
+            className="w-[calc(100vw-24px)] max-w-xs sm:w-80 bg-white border border-pink-200 rounded-2xl shadow-2xl p-3.5 sm:p-4 text-slate-900 space-y-3"
           >
-            <div className="flex items-center justify-between pb-2 border-b border-purple-100">
+            <div className="flex items-center justify-between pb-2 border-b border-pink-100">
               <div className="flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-[#800080]" />
-                <span className="font-cinzel text-xs font-bold tracking-wider text-[#800080] uppercase">
+                <Sparkles className="w-4 h-4 text-[#e71e92]" />
+                <span className="font-sans text-xs font-bold tracking-wider text-[#831154] uppercase">
                   Direct Academy Helplines
                 </span>
               </div>
@@ -48,22 +48,22 @@ export const QuickContactFab: React.FC = () => {
                 <a
                   key={phone}
                   href={`tel:${phone.replace(/\s+/g, '')}`}
-                  className="flex items-center justify-between p-2.5 rounded-xl bg-purple-50/50 hover:bg-[#800080] border border-purple-200 text-slate-900 hover:text-white font-mono text-sm font-bold transition-all group"
+                  className="flex items-center justify-between p-2.5 rounded-xl bg-pink-50/50 hover:bg-[#831154] border border-pink-200 text-slate-900 hover:text-white font-mono text-sm font-bold transition-all group"
                 >
                   <div className="flex items-center gap-2">
-                    <Phone className="w-3.5 h-3.5 text-[#800080] group-hover:text-white" />
+                    <Phone className="w-3.5 h-3.5 text-[#e71e92] group-hover:text-white" />
                     <span>{phone}</span>
                   </div>
-                  <span className="text-[10px] text-[#800080] group-hover:text-purple-100 uppercase font-sans font-semibold">
+                  <span className="text-[10px] text-[#e71e92] group-hover:text-pink-200 uppercase font-sans font-semibold">
                     {idx === 0 ? '1st Contact' : idx === 1 ? '2nd Contact' : '3rd Contact'}
                   </span>
                 </a>
               ))}
             </div>
 
-            <div className="pt-2 border-t border-purple-100 flex items-center justify-between text-[11px] text-slate-600">
+            <div className="pt-2 border-t border-pink-100 flex items-center justify-between text-[11px] text-slate-600">
               <span className="flex items-center gap-1">
-                <MapPin className="w-3 h-3 text-[#800080]" />
+                <MapPin className="w-3 h-3 text-[#e71e92]" />
                 Puthu Theru, Thiruvarur
               </span>
               <span className="text-emerald-600 font-semibold">Open 7 AM - 8:30 PM</span>
@@ -90,7 +90,7 @@ export const QuickContactFab: React.FC = () => {
         {/* Call Helplines Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="group relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#800080] hover:bg-[#680068] border-2 border-white text-white shadow-xl hover:shadow-purple-900/40 transition-all hover:scale-105 active:scale-95 cursor-pointer"
+          className="group relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#831154] hover:bg-[#640c40] border-2 border-white text-white shadow-xl hover:shadow-pink-900/40 transition-all hover:scale-105 active:scale-95 cursor-pointer"
           title="View 4 Direct Helpline Numbers"
           aria-label="Call Academy"
         >
