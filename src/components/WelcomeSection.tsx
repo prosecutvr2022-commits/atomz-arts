@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Sparkles, Heart, Compass, CheckCircle2, Award, Users } from 'lucide-react';
 import { PageView } from '../types';
+import { OptimizedImage } from './OptimizedImage';
 
 interface WelcomeSectionProps {
   onNavigate: (page: PageView) => void;
@@ -27,18 +28,14 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({
             >
               {/* Primary Image: Dance & Music Harmony */}
               <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-pink-50">
-                <img
-                  src="/welcome-arts.png"
+                <OptimizedImage
+                  src="/welcome-arts.webp"
+                  fallbackSrc="/welcome-arts.png"
                   alt="Traditional Arts and Modern Learning at Atomz Academy"
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    if (e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1VvYjxQNyzQU401kAzyE1tIReiTNgXOp9') {
-                      e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1VvYjxQNyzQU401kAzyE1tIReiTNgXOp9';
-                    }
-                  }}
                   className="w-full h-80 sm:h-96 object-cover"
+                  containerClassName="w-full h-80 sm:h-96"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#831154]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#831154]/80 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <span className="text-[10px] uppercase font-bold tracking-widest text-pink-200">
                     Kaveri Delta Legacy

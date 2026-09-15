@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Sparkles, Eye, Filter, Image as ImageIcon } from 'lucide-react';
 import { GALLERY_ITEMS, GALLERY_CATEGORIES } from '../data/galleryData';
 import { GalleryItem } from '../types';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 interface GalleryPageProps {
   onSelectImage: (item: GalleryItem) => void;
@@ -72,18 +73,13 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onSelectImage }) => {
               className="group relative rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 bg-white border border-pink-100 cursor-pointer"
             >
               <div className="aspect-[4/3] overflow-hidden bg-slate-900 relative">
-                <img
+                <OptimizedImage
                   src={item.imageUrl}
                   alt={item.title}
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    if (item.imageUrl === '/drawing-painting.png' || item.id === 'gal-6') {
-                      e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1A-9CcMzqX9oeg7ciwiv4oRdk1fJA3RB6';
-                    }
-                  }}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  containerClassName="w-full h-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all pointer-events-none" />
 
                 <div className="absolute top-3 left-3">
                   <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-[#e71e92] text-white border border-pink-300 shadow">

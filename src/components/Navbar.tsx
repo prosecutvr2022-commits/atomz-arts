@@ -194,7 +194,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                           <span className="text-xs font-bold">{phone}</span>
                         </div>
                         <span className="text-[10px] text-[#e71e92] font-bold">
-                          {idx === 0 ? 'Primary' : `Line 0${idx + 1}`}
+                          {idx === 0 ? 'Primary Contact' : idx === 1 ? '2nd Contact' : '3rd Contact'}
                         </span>
                       </a>
                     ))}

@@ -4,6 +4,7 @@ import { Sparkles, Heart, Compass, CheckCircle2, Award, Users, BookOpen, Music, 
 import { PageView } from '../types';
 import { CONTACT_INFO, ACADEMY_STATS } from '../data/coursesData';
 import { Logo } from '../components/Logo';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 interface AboutPageProps {
   onNavigate: (page: PageView) => void;
@@ -140,11 +141,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenEnquiry 
 
           <div className="lg:col-span-6">
             <div className="relative rounded-3xl p-3 bg-pink-100 shadow-xl border border-pink-200">
-              <img
-                src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=900&auto=format&fit=crop"
+              <OptimizedImage
+                src="/welcome-arts.webp"
+                fallbackSrc="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=900&auto=format&fit=crop"
                 alt="Classical Indian Fine Arts and Learning"
-                referrerPolicy="no-referrer"
                 className="w-full h-96 object-cover rounded-2xl"
+                containerClassName="w-full h-96 rounded-2xl"
               />
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#831154]/90 backdrop-blur-md text-white border border-pink-300/40">
                 <div className="font-sans text-sm font-bold text-white">Puthu Theru, Thiruvarur</div>

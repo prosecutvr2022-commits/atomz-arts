@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Sparkles, MapPin, GraduationCap, Phone, ArrowRight, Play, Award, CheckCircle2 } from 'lucide-react';
 import { CONTACT_INFO, ACADEMY_STATS } from '../data/coursesData';
 import { PageView } from '../types';
+import { OptimizedImage } from './OptimizedImage';
 
 interface HeroSectionProps {
   onNavigate: (page: PageView) => void;
@@ -152,14 +153,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="relative rounded-3xl p-2.5 sm:p-3 bg-gradient-to-b from-[#831154] via-[#e71e92]/50 to-[#831154]/90 shadow-2xl border-2 border-white">
                 <div className="relative rounded-2xl overflow-hidden bg-slate-100 aspect-[9/16] w-full shadow-inner">
                   {/* Native High-Resolution Bharatanatyam Classical Dance Training Visual */}
-                  <img
-                    src="/bharatanatyam.png"
+                  <OptimizedImage
+                    src="/bharatanatyam.webp"
+                    fallbackSrc="/bharatanatyam.png"
                     alt="Bharatanatyam Classical Dance Training"
-                    referrerPolicy="no-referrer"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1lbzrLe0QiycGlPyoI_21pi9qJdNQGy-B';
-                    }}
+                    priority={true}
                     className="w-full h-full object-cover object-center transform hover:scale-102 transition-transform duration-700"
+                    containerClassName="w-full h-full"
                   />
                 </div>
               </div>

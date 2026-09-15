@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { OptimizedImage } from './OptimizedImage';
 
 interface BharatanatyamPosterProps {
   className?: string;
@@ -14,18 +15,13 @@ export const BharatanatyamPoster: React.FC<BharatanatyamPosterProps> = ({
   return (
     <div className={`relative w-full h-full overflow-hidden bg-[#140A07] select-none ${className}`}>
       {!imageError ? (
-        <img
-          src="/bharatanatyam.png"
+        <OptimizedImage
+          src="/bharatanatyam.webp"
+          fallbackSrc="/bharatanatyam.png"
           alt={alt}
-          referrerPolicy="no-referrer"
-          onError={(e) => {
-            if (e.currentTarget.src !== 'https://lh3.googleusercontent.com/d/1180ilh5XvAc3DVAk7EwUb8DDRd0kDxge') {
-              e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1180ilh5XvAc3DVAk7EwUb8DDRd0kDxge';
-            } else {
-              setImageError(true);
-            }
-          }}
+          priority={true}
           className="w-full h-full object-cover object-top block"
+          containerClassName="w-full h-full"
         />
       ) : (
         <svg

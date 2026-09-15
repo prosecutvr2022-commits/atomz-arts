@@ -16,7 +16,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'பரதநாட்டிய அரங்கேற்ற நிகழ்வு',
     category: 'dance',
     categoryLabel: 'Classical Dance',
-    imageUrl: '/bharatanatyam.png',
+    imageUrl: '/bharatanatyam.webp',
     caption: 'Senior disciples presenting traditional Varnam with intense Abhinaya and footwork in classical silk costume.',
     date: 'Annual Cultural Festival',
     featured: true
@@ -27,7 +27,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'கர்நாடக சங்கீத வாய்ப்பாட்டு கச்சேரி',
     category: 'music',
     categoryLabel: 'Music & Instruments',
-    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=75&w=700&auto=format&fit=crop',
     caption: 'Vocal ensemble performance accompanied by Violin and Mridangam during Navaratri Sangeetha Utsavam.',
     date: 'Kaveri Delta Isai Sangamam',
     featured: true
@@ -38,7 +38,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'வயலின் & வீணை இசை வகுப்பு',
     category: 'music',
     categoryLabel: 'Music & Instruments',
-    imageUrl: '/violin.png',
+    imageUrl: '/violin.webp',
     caption: 'Students receiving personalized guidance on microtone gamakas and bow velocity.',
     date: 'Weekly Studio Session'
   },
@@ -48,7 +48,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'மிருதங்க லய பயிற்சி பட்டறை',
     category: 'music',
     categoryLabel: 'Music & Instruments',
-    imageUrl: 'https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?q=75&w=700&auto=format&fit=crop',
     caption: 'Young percussionists mastering intricate Adi tala korvais and tempo transitions.',
     date: 'Laya Sangamam'
   },
@@ -58,7 +58,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'ஆரி எம்பிராய்டரி கைவினை பயிற்சி',
     category: 'classes',
     categoryLabel: 'Vocational Craft',
-    imageUrl: '/aari-embroidery.png',
+    imageUrl: '/aari-embroidery.webp',
     caption: 'Women artisans working on bridal zari motifs, stone embellishments, and Maggam frame designing.',
     date: 'Self-Employment Batch'
   },
@@ -68,7 +68,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'ஓவியக் கண்காட்சி & வண்ணங்கள்',
     category: 'classes',
     categoryLabel: 'Art & Drawing',
-    imageUrl: '/drawing-painting.png',
+    imageUrl: '/drawing-painting.webp',
     caption: 'Student artwork gallery showcasing traditional temple art, water color paintings, and oil pastel landscapes.',
     date: 'Children Fine Art Expo',
     featured: true
@@ -79,7 +79,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'யோகாசன மற்றும் பிராணாயாம பயிற்சி',
     category: 'students',
     categoryLabel: 'Health & Yoga',
-    imageUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=75&w=700&auto=format&fit=crop',
     caption: 'Morning sunrise yoga batch focusing on flexibility, breath control, and student concentration.',
     date: 'International Yoga Day'
   },
@@ -89,7 +89,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'அபாகஸ் வேகக் கணித போட்டி',
     category: 'events',
     categoryLabel: 'Academic Events',
-    imageUrl: '/abacus-mental-math.png',
+    imageUrl: '/abacus-mental-math.webp',
     caption: 'Young prodigies demonstrating lightning-speed mental arithmetic without paper or calculators.',
     date: 'State Talent Contest'
   },
@@ -99,7 +99,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'மேற்கத்திய நடன மேடை நிகழ்ச்சி',
     category: 'performances',
     categoryLabel: 'Performances',
-    imageUrl: '/western-dance.png',
+    imageUrl: '/western-dance.webp',
     caption: 'High-octane choreography presentation by the Atomz Western Dance troupe at district youth fest.',
     date: 'Youth Cultural Fest',
     featured: true
@@ -110,7 +110,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'செஸ் சதுரங்கப் போட்டி',
     category: 'events',
     categoryLabel: 'Chess & Mind Sports',
-    imageUrl: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?q=75&w=700&auto=format&fit=crop',
     caption: 'Students applying tactical forks and pin formations under timed tournament conditions.',
     date: 'Atomz Rapid Chess Open'
   },
@@ -120,7 +120,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'தையல் கலை & ஆடை வடிவமைப்பு',
     category: 'classes',
     categoryLabel: 'Vocational Craft',
-    imageUrl: '/tailoring-fashion.png',
+    imageUrl: '/tailoring-fashion.webp',
     caption: 'Graduating students displaying custom-tailored designer blouses and ethnic wear creations.',
     date: 'Vocational Graduation'
   },
@@ -130,7 +130,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tamilTitle: 'வருடாந்திர கலை விழா & சான்றிதழ் வழங்கள்',
     category: 'events',
     categoryLabel: 'Academy Events',
-    imageUrl: '/welcome-arts.png',
+    imageUrl: '/welcome-arts.webp',
     caption: 'Dignitaries and senior Vidwans honoring students with diplomas and gold medals.',
     date: 'Atomz Kalai Sangamam',
     featured: true
@@ -145,7 +145,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Parent of Bharatanatyam Disciple',
     course: 'Bharatanatyam & Carnatic Vocal',
     quote: 'My daughter started learning Bharatanatyam at Atomz Arts Academy two years ago. The devotion, traditional discipline, and stage opportunities provided here in Thiruvarur are truly unmatched. Her confidence and posture have blossomed.',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=75&w=200&auto=format&fit=crop',
     rating: 5
   },
   {
@@ -155,7 +155,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Parent of Abacus & Tuition Student',
     course: 'Abacus & Class 10 Tuition',
     quote: 'Atomz is not just an arts school, it is a complete temple of learning. My son improved his maths calculation speed drastically with Abacus and scored 96% in his 10th standard board exams thanks to the dedicated tuition teachers.',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=75&w=200&auto=format&fit=crop',
     rating: 5
   },
   {
@@ -165,7 +165,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Boutique Owner & Aari Artisan',
     course: 'Aari Embroidery & Tailoring',
     quote: 'I joined the Aari embroidery and tailoring training with zero experience. Within 3 months of hands-on practice, I learned bridal blouse designing and have now opened my own home-based boutique earning independent income.',
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=300&auto=format&fit=crop',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=75&w=200&auto=format&fit=crop',
     rating: 5
   },
   {
@@ -175,7 +175,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Keyboard & Western Dance Student',
     course: 'Keyboard & Western Dance',
     quote: 'The music and dance mentors are remarkably patient and encouraging. I can now play complex chords and melodies on keyboard while also performing in state-level group dance events.',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format&fit=crop',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=75&w=200&auto=format&fit=crop',
     rating: 5
   }
 ];
@@ -188,7 +188,7 @@ export const FACULTY_MEMBERS: FacultyMember[] = [
     tamilRole: 'பரதநாட்டியம் முதன்மை ஆசான்',
     experience: '22+ Years in Natya Shastra',
     specialization: 'Bharatanatyam, Nattuvangam & Temple Choreography',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=75&w=400&auto=format&fit=crop',
     description: 'Renowned disciple of the Thanjavur tradition who has guided over 50 disciples through their formal Arangetrams across Tamil Nadu.'
   },
   {
@@ -198,7 +198,7 @@ export const FACULTY_MEMBERS: FacultyMember[] = [
     tamilRole: 'கர்நாடக சங்கீதம் & வீணை பேராசிரியை',
     experience: '18+ Years Concert & Teaching Experience',
     specialization: 'Sruti Voice Culture, Gamakas & Trinity Compositions',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=75&w=400&auto=format&fit=crop',
     description: 'Grade A concert artist deeply committed to preserving the pure Kaveri Delta classical music tradition.'
   },
   {
@@ -208,7 +208,7 @@ export const FACULTY_MEMBERS: FacultyMember[] = [
     tamilRole: 'மிருதங்கம் & தபேலா ஆசான்',
     experience: '16+ Years Rhythmic Pedagogy',
     specialization: 'Mridangam, Tabla, Drums & Tala Mathematics',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=75&w=400&auto=format&fit=crop',
     description: 'Master of intricate Korvais and Moharas with extensive concert accompaniment experience.'
   },
   {
@@ -218,7 +218,7 @@ export const FACULTY_MEMBERS: FacultyMember[] = [
     tamilRole: 'கைவினை மற்றும் சுயதொழில் பயிற்சி இயக்குனர்',
     experience: '15+ Years in Fashion & Fine Crafts',
     specialization: 'Aari Embroidery, Bridal Designing, Tailoring & Beautician',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=75&w=400&auto=format&fit=crop',
     description: 'Passionate trainer who has empowered hundreds of women with certified self-employment skills.'
   }
 ];

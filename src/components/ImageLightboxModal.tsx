@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Sparkles, Calendar, Tag } from 'lucide-react';
 import { GalleryItem } from '../types';
+import { OptimizedImage } from './OptimizedImage';
 
 interface ImageLightboxModalProps {
   item: GalleryItem | null;
@@ -53,16 +54,11 @@ export const ImageLightboxModal: React.FC<ImageLightboxModalProps> = ({ item, on
 
           {/* Image Container */}
           <div className="relative w-full max-h-[60vh] sm:max-h-[70vh] bg-black flex items-center justify-center overflow-hidden">
-            <img
+            <OptimizedImage
               src={item.imageUrl}
               alt={item.title}
-              referrerPolicy="no-referrer"
-              onError={(e) => {
-                if (item.imageUrl === '/drawing-painting.png' || item.id === 'gal-6') {
-                  e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1A-9CcMzqX9oeg7ciwiv4oRdk1fJA3RB6';
-                }
-              }}
-              className="max-h-full max-w-full object-contain"
+              className="max-h-[60vh] sm:max-h-[70vh] max-w-full object-contain mx-auto"
+              containerClassName="max-h-[60vh] sm:max-h-[70vh] flex items-center justify-center"
             />
           </div>
 

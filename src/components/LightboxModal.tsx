@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronLeft, ChevronRight, Sparkles, Tag, Calendar } from 'lucide-react';
 import { GalleryItem } from '../types';
+import { OptimizedImage } from './OptimizedImage';
 
 interface LightboxModalProps {
   isOpen: boolean;
@@ -85,11 +86,11 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         >
           {/* Main Visual */}
           <div className="relative flex-1 bg-black flex items-center justify-center min-h-[320px] max-h-[65vh] overflow-hidden">
-            <img
+            <OptimizedImage
               src={item.imageUrl}
               alt={item.title}
-              referrerPolicy="no-referrer"
-              className="max-h-full max-w-full object-contain mx-auto select-none"
+              className="max-h-[65vh] max-w-full object-contain mx-auto select-none"
+              containerClassName="max-h-[65vh] w-full flex items-center justify-center"
             />
             {/* Subtle Gradient vignette */}
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />

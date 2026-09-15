@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Sparkles, MapPin, Phone, Mail, Clock, MessageCircle, Send, CheckCircle2, Building, HelpCircle } from 'lucide-react';
+import { Sparkles, MapPin, Phone, Mail, Clock, MessageCircle, Send, CheckCircle2, Building, HelpCircle, Loader2, AlertCircle, ShieldCheck } from 'lucide-react';
+import confetti from 'canvas-confetti';
 import { CONTACT_INFO, ALL_COURSES } from '../data/coursesData';
 import { EnquiryFormData } from '../types';
+import { submitToFormBold, isFormBoldConfigured } from '../services/formbold';
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState<EnquiryFormData>({
@@ -11,16 +13,55 @@ export const ContactPage: React.FC = () => {
     phone: '',
     email: '',
     courseInterest: 'Bharatanatyam (பரதநாட்டியம்)',
-    ageGroup: 'Kids (Age 4-12)',
+    ageGroup: 'Kids (Age 4-10)',
     preferredTiming: 'Evening (4:30 PM - 7:30 PM)',
     message: ''
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (!formData.studentName || !formData.phone) return;
+
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    const result = await submitToFormBold({
+      studentName: formData.studentName.trim(),
+      parentName: formData.parentName.trim() || undefined,
+      phone: formData.phone.trim(),
+      email: formData.email.trim() || undefined,
+      courseName: formData.courseInterest,
+      age: formData.ageGroup,
+      batchPreference: formData.preferredTiming,
+      learningMode: 'Offline (Thiruvarur Academy Campus) / Hybrid',
+      message: formData.message.trim() || undefined,
+      formSource: 'Contact Page Form'
+    });
+
+    setIsSubmitting(false);
+
+    if (result.success) {
+      setSubmitted(true);
+      try {
+        confetti({
+          particleCount: 75,
+          spread: 60,
+          origin: { y: 0.6 },
+          colors: ['#D4AF37', '#e71e92', '#831154', '#ff60b6']
+        });
+      } catch {
+        // ignore
+      }
+    } else {
+      setSubmitError(
+        result.message ||
+        'Unable to send application right now. Please check your connection or contact us directly on WhatsApp.'
+      );
+    }
   };
 
   const handleWhatsAppDirect = () => {
@@ -44,8 +85,9 @@ export const ContactPage: React.FC = () => {
             Contact <span className="text-[#ff60b6]">Atomz Arts Academy</span>
           </h1>
 
-          <p className="font-tamil text-xl sm:text-2xl text-pink-200 font-bold max-w-2xl mx-auto">
-            தொடர்பு கொள்க • புதுத்தெரு, திருவாரூர், தமிழ்நாடு
+          <p className="font-tamil text-xl sm:text-2xl text-pink-200 font-bold max-w-2xl mx-auto leading-snug">
+            <span>தொடர்புக்கு</span>
+            <span className="block text-pink-300 font-medium text-lg sm:text-xl mt-1">புதுத்தெரு, திருவாரூர், தமிழ்நாடு</span>
           </p>
 
           <p className="text-pink-100 text-sm sm:text-base max-w-3xl mx-auto font-normal leading-relaxed">
@@ -178,21 +220,49 @@ export const ContactPage: React.FC = () => {
                   <div className="w-14 h-14 bg-[#e71e92] text-white rounded-full flex items-center justify-center mx-auto shadow-md">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="font-sans text-xl font-bold text-[#831154]">
+
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-bold">
+                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                    <span>Delivered via FormBold</span>
+                  </div>
+
+                  <h3 className="font-sans text-xl sm:text-2xl font-bold text-[#831154]">
                     Enquiry Received Successfully!
                   </h3>
                   <p className="text-sm text-slate-700 leading-relaxed max-w-md mx-auto">
-                    Vanakkam! Our academy coordinator in Thiruvarur will contact you within 24 hours to confirm batch timing and trial session details.
+                    Vanakkam, <strong>{formData.studentName}</strong>! Your application has been dispatched to Atomz Arts Academy admissions team. Our coordinator in Thiruvarur will contact you within 24 hours to confirm batch timing and trial session details.
                   </p>
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="px-6 py-2.5 rounded-xl bg-[#e71e92] hover:bg-[#d11481] text-white text-xs font-bold transition-all cursor-pointer"
-                  >
-                    Submit Another Enquiry
-                  </button>
+                  <div className="pt-2 flex flex-wrap justify-center gap-3">
+                    <button
+                      onClick={handleWhatsAppDirect}
+                      className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all cursor-pointer inline-flex items-center gap-2 shadow-sm"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      <span>Chat on WhatsApp</span>
+                    </button>
+                    <button
+                      onClick={() => setSubmitted(false)}
+                      className="px-5 py-2.5 rounded-xl bg-[#e71e92] hover:bg-[#d11481] text-white text-xs font-bold transition-all cursor-pointer"
+                    >
+                      Submit Another Enquiry
+                    </button>
+                  </div>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {/* FormBold Connection / Error Notice */}
+                  {submitError && (
+                    <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-800 text-xs sm:text-sm flex items-start gap-2.5">
+                      <AlertCircle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
+                      <div className="space-y-1 flex-1">
+                        <p className="font-semibold">{submitError}</p>
+                        <p className="text-xs text-red-700">
+                          You can also reach out to our admission counselors directly via WhatsApp below.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label className="text-xs font-bold text-slate-700">
@@ -314,23 +384,40 @@ export const ContactPage: React.FC = () => {
                     />
                   </div>
 
-                  <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
-                    <button
-                      type="submit"
-                      className="w-full sm:flex-1 py-3.5 rounded-xl bg-[#e71e92] hover:bg-[#d11481] text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
-                    >
-                      <Send className="w-4 h-4" />
-                      <span>Submit Admission Enquiry</span>
-                    </button>
+                  <div className="space-y-2 pt-1">
+                    <div className="flex flex-col sm:flex-row items-center gap-3">
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-full sm:flex-1 py-3.5 rounded-xl bg-[#e71e92] hover:bg-[#d11481] text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-75"
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                            <span>Submitting to FormBold...</span>
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-4 h-4" />
+                            <span>Submit Admission Enquiry</span>
+                          </>
+                        )}
+                      </button>
 
-                    <button
-                      type="button"
-                      onClick={handleWhatsAppDirect}
-                      className="w-full sm:w-auto px-5 py-3.5 rounded-xl border border-emerald-600 text-emerald-700 hover:bg-emerald-50 font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                      <span>Chat on WhatsApp</span>
-                    </button>
+                      <button
+                        type="button"
+                        onClick={handleWhatsAppDirect}
+                        className="w-full sm:w-auto px-5 py-3.5 rounded-xl border border-emerald-600 text-emerald-700 hover:bg-emerald-50 font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
+                      >
+                        <MessageCircle className="w-4 h-4" />
+                        <span>Chat on WhatsApp</span>
+                      </button>
+                    </div>
+
+                    <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-500 pt-1">
+                      <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>Direct FormBold integration • Notifications forwarded to academy admissions desk</span>
+                    </div>
                   </div>
                 </form>
               )}

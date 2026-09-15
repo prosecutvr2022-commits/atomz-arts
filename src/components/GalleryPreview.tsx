@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Sparkles, ArrowRight, Eye, Tag } from 'lucide-react';
 import { GALLERY_ITEMS } from '../data/galleryData';
 import { GalleryItem, PageView } from '../types';
+import { OptimizedImage } from './OptimizedImage';
 
 interface GalleryPreviewProps {
   onNavigate: (page: PageView) => void;
@@ -50,18 +51,13 @@ export const GalleryPreview: React.FC<GalleryPreviewProps> = ({ onNavigate, onSe
               onClick={() => onSelectImage(item)}
               className="group relative h-64 sm:h-72 rounded-2xl overflow-hidden shadow-md cursor-pointer border border-pink-100"
             >
-              <img
+              <OptimizedImage
                 src={item.imageUrl}
                 alt={item.title}
-                referrerPolicy="no-referrer"
-                onError={(e) => {
-                  if (item.imageUrl === '/drawing-painting.png' || item.id === 'gal-6') {
-                    e.currentTarget.src = 'https://lh3.googleusercontent.com/d/1A-9CcMzqX9oeg7ciwiv4oRdk1fJA3RB6';
-                  }
-                }}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                containerClassName="w-full h-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all pointer-events-none" />
 
               <div className="absolute top-3 left-3">
                 <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-[#831154] text-white border border-pink-300 shadow">

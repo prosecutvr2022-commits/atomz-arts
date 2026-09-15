@@ -55,7 +55,7 @@ export const QuickContactFab: React.FC = () => {
                     <span>{phone}</span>
                   </div>
                   <span className="text-[10px] text-[#e71e92] group-hover:text-pink-200 uppercase font-sans font-semibold">
-                    {idx === 0 ? '1st Contact' : idx === 1 ? '2nd Contact' : '3rd Contact'}
+                    {idx === 0 ? 'Primary Contact' : idx === 1 ? '2nd Contact' : '3rd Contact'}
                   </span>
                 </a>
               ))}
