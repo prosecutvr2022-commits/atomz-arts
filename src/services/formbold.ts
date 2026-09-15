@@ -1,8 +1,10 @@
 /**
  * FormBold Integration Service
  * Securely forwards Student Enquiries and Course Enrollment applications
- * to the academy's FormBold endpoint (https://formbold.com).
+ * to the academy's FormBold endpoint (https://formbold.com/s/3jYbq).
  */
+
+export const DEFAULT_FORMBOLD_FORM_ID = '3jYbq';
 
 export interface FormBoldSubmission {
   studentName: string;
@@ -23,148 +25,128 @@ export interface FormBoldSubmission {
 export interface FormBoldResult {
   success: boolean;
   message: string;
-  isSimulated?: boolean;
+  endpointUsed?: string;
 }
 
 /**
- * Resolves the full FormBold endpoint URL from environment variables.
- * Handles both plain Form IDs (e.g., "9x12ab") and full URLs (e.g., "https://formbold.com/s/9x12ab").
+ * Resolves the full FormBold endpoint URL.
+ * Defaults to the academy's configured Form ID '3jYbq'.
  */
-export function getFormBoldEndpoint(): string | null {
-  const raw = (import.meta.env.VITE_FORMBOLD_FORM_ID || '').trim();
-  if (!raw) return null;
+export function getFormBoldEndpoint(): string {
+  const raw = (import.meta.env.VITE_FORMBOLD_FORM_ID || DEFAULT_FORMBOLD_FORM_ID).trim();
+  if (!raw) {
+    return `https://formbold.com/s/${DEFAULT_FORMBOLD_FORM_ID}`;
+  }
 
   if (raw.startsWith('http://') || raw.startsWith('https://')) {
     return raw;
   }
 
   const cleanId = raw.replace(/^\/?(s\/)?/, '').trim();
-  if (!cleanId) return null;
+  if (!cleanId) {
+    return `https://formbold.com/s/${DEFAULT_FORMBOLD_FORM_ID}`;
+  }
 
   return `https://formbold.com/s/${cleanId}`;
 }
 
-/**
- * Check if a FormBold Form ID has been provided in the environment.
- */
 export function isFormBoldConfigured(): boolean {
-  return Boolean(getFormBoldEndpoint());
+  return true;
 }
 
 /**
  * Submits application details to FormBold.
- * If FormBold is not yet configured, cleanly captures the submission and
- * notifies the developer/admin so the user experience is never blocked.
+ * Also stores a local backup copy in browser storage so no admission enquiry is ever lost.
  */
 export async function submitToFormBold(data: FormBoldSubmission): Promise<FormBoldResult> {
   const endpoint = getFormBoldEndpoint();
 
-  // If no FormBold endpoint is configured yet (e.g., during preview before setup)
-  if (!endpoint) {
-    console.info(
-      '%c[FormBold]%c Form submitted successfully (Demo Mode). To receive actual email notifications and store submissions in your FormBold dashboard, set VITE_FORMBOLD_FORM_ID in your environment.',
-      'color: #e71e92; font-weight: bold;',
-      'color: inherit;'
-    );
-    console.table({
-      'Student Name': data.studentName,
-      'Parent / Guardian': data.parentName || 'N/A',
-      'Phone': data.phone,
-      'Email': data.email || 'N/A',
-      'Course': `${data.courseName} ${data.courseTamilName ? `(${data.courseTamilName})` : ''}`,
-      'Batch Preference': data.batchPreference || 'N/A',
-      'Learning Mode': data.learningMode || 'N/A',
-      'Age / Grade': data.age || 'N/A',
-      'Notes': data.message || 'None',
-      'Source': data.formSource,
+  // 1. Safe local storage backup log
+  try {
+    const rawHistory = localStorage.getItem('atomz_enquiries_backup');
+    const history = rawHistory ? JSON.parse(rawHistory) : [];
+    history.unshift({
+      id: `ENQ-${Date.now()}`,
+      timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+      ...data
     });
-
-    // Simulate network delay for natural UI feedback
-    await new Promise((resolve) => setTimeout(resolve, 600));
-
-    return {
-      success: true,
-      isSimulated: true,
-      message: 'Enquiry details recorded! (FormBold endpoint will activate once VITE_FORMBOLD_FORM_ID is added in Settings).'
-    };
+    localStorage.setItem('atomz_enquiries_backup', JSON.stringify(history.slice(0, 50)));
+  } catch {
+    // ignore storage quota issues
   }
 
+  // 2. Structured JSON payload for FormBold
+  const payload = {
+    name: data.studentName,
+    email: data.email || 'admissions@atomzarts.in',
+    phone: data.phone,
+    student_name: data.studentName,
+    parent_or_guardian: data.parentName || 'Not specified',
+    contact_phone: data.phone,
+    whatsapp_number: data.whatsapp || data.phone,
+    email_address: data.email || 'Not provided',
+    course_selected: `${data.courseName}${data.courseTamilName ? ` (${data.courseTamilName})` : ''}`,
+    course_category: data.courseCategory || 'Arts & Academics',
+    student_age: data.age || 'Not specified',
+    preferred_timing: data.batchPreference || 'Flexible',
+    learning_mode: data.learningMode || 'Offline (Thiruvarur Academy Campus)',
+    inquiry_notes: data.message || 'Student admission & trial class enquiry from website',
+    academy_center: 'Atomz Arts Academy, Puthu Theru, Thiruvarur',
+    source: data.formSource,
+    submission_time: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+  };
+
   try {
-    // Construct multi-field form payload for FormBold
-    const payload = new FormData();
-
-    // Standard FormBold fields for quick dashboard indexing
-    payload.append('name', data.studentName);
-    payload.append('phone', data.phone);
-    if (data.email) {
-      payload.append('email', data.email);
-    }
-
-    // Descriptive fields for FormBold email notifications
-    payload.append('Student Full Name', data.studentName);
-    payload.append('Parent / Guardian Name', data.parentName || 'Not specified');
-    payload.append('Contact Phone Number', data.phone);
-    payload.append('WhatsApp Number', data.whatsapp || data.phone);
-    if (data.email) {
-      payload.append('Email Address', data.email);
-    }
-    payload.append(
-      'Selected Course',
-      `${data.courseName}${data.courseTamilName ? ` (${data.courseTamilName})` : ''}`
-    );
-    if (data.courseCategory) {
-      payload.append('Course Category', data.courseCategory);
-    }
-    if (data.age) {
-      payload.append('Student Age / Grade', data.age);
-    }
-    if (data.batchPreference) {
-      payload.append('Preferred Batch Timing', data.batchPreference);
-    }
-    if (data.learningMode) {
-      payload.append('Learning Mode', data.learningMode);
-    }
-    if (data.message) {
-      payload.append('Inquiry / Prior Experience Notes', data.message);
-    }
-    payload.append('Application Form Source', data.formSource);
-    payload.append('Academy Name', 'Atomz Arts Academy (Puthu Theru, Thiruvarur)');
-    payload.append(
-      'Submission Timestamp',
-      new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
-    );
-
     const response = await fetch(endpoint, {
       method: 'POST',
       headers: {
+        'Content-Type': 'application/json',
         Accept: 'application/json'
       },
-      body: payload
+      body: JSON.stringify(payload)
     });
 
     if (response.ok) {
       return {
         success: true,
-        message: 'Your admission enquiry has been successfully delivered to Atomz Arts Academy via FormBold!'
+        message: 'Your admission enquiry has been successfully delivered to Atomz Arts Academy via FormBold!',
+        endpointUsed: endpoint
       };
     }
 
-    // Try parsing error response from FormBold
-    const errorJson = await response.json().catch(() => null);
-    const errorMsg = errorJson?.message || `FormBold returned status ${response.status}`;
+    // Attempt FormData fallback if JSON rejected
+    const formData = new FormData();
+    Object.entries(payload).forEach(([k, v]) => formData.append(k, String(v)));
+    const formResponse = await fetch(endpoint, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: formData
+    });
 
-    console.error('[FormBold Error]', errorMsg, errorJson);
+    if (formResponse.ok) {
+      return {
+        success: true,
+        message: 'Your admission enquiry has been successfully delivered to Atomz Arts Academy via FormBold!',
+        endpointUsed: endpoint
+      };
+    }
+
+    const errJson = await formResponse.json().catch(() => null);
+    const errorMsg = errJson?.message || `FormBold responded with status ${response.status}`;
+    console.error('[FormBold Error]', errorMsg, errJson);
 
     return {
       success: false,
-      message: errorMsg
+      message: errorMsg,
+      endpointUsed: endpoint
     };
   } catch (err: unknown) {
     console.error('[FormBold Network Error]', err);
     const msg = err instanceof Error ? err.message : 'Network error communicating with FormBold';
     return {
       success: false,
-      message: msg
+      message: msg,
+      endpointUsed: endpoint
     };
   }
 }
